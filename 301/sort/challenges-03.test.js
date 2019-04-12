@@ -46,7 +46,9 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
- 
+ arr.sort(function(a, b){return a.toLowerCase().localeCompare(b.toLowerCase());
+ });
+ return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
