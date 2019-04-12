@@ -65,7 +65,8 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  // Solution code here...
+  arr.sort(function(a, b){return a.price-b.price});
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
