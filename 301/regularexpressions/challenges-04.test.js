@@ -13,8 +13,9 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  let regex = /^[0-9]*$/g;
-    return regex.test(input);
+  // let regex = /^[0-9]*$/g;
+  //   return regex.test(input);
+  return input.toString().match(/\d/) ? true : false;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -26,7 +27,9 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+
+  let regex = (/[A-Z][a-z]*/g);
+  return str.match(regex);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -36,7 +39,8 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  let regex = (/^[A-J]*/g);
+  return str.match(regex);
 };
 
 /* ------------------------------------------------------------------------------------------------
