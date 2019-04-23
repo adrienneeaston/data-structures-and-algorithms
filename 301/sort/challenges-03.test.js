@@ -78,10 +78,17 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbersByLength = (arr) => {
+  arr.forEach(function(number) {
+    number.toString();
+  })
   arr.sort(function(a, b){return a.length - b.length});
+  arr.forEach(function(str) {
+    parseInt();
+  });
   return arr;
 };
-// not passing
+
+// not working
 
 /*-----------------------------------------------------------------------------------------------
 CHALLENGE 7
@@ -102,10 +109,8 @@ const people = [
 ];
 
 const sortPeople = (arr) => {
-  arr.sort(function(a, b){return a.this.lastName - b.this.lastName});
-  return arr;
+  // Solution code here...
 };
-// not passing
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8
