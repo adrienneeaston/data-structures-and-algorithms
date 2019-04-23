@@ -70,9 +70,16 @@ let characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  // Solution code here...
+  arr.forEach(house => {
+      let houseName = Object.values(house);
+      console.log(house);
+      console.log(houseName);
+      houses.push(houseName);
+  });
   return houses;
 };
+
+// not working
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -87,7 +94,13 @@ hasChildrenValues(characters, 'Eddard') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
+  let numChildren = 0;
+  arr.forEach(person => {
+      if (person.name === character) {
+          numChildren = Object.values(person)[2].length > 0 ? true : false;
+      }
+  });
+  return numChildren;
 };
 
 /* ------------------------------------------------------------------------------------------------
