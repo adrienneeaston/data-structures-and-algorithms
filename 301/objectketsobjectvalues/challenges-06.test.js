@@ -70,14 +70,11 @@ let characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  arr.forEach(house => {
-      let houseName = Object.values(house);
-      console.log(house);
-      console.log(houseName);
+  arr.forEach(person => {
+      let houseName = Object.values(person);
       houses.push(houseName);
   });
   return houses;
-};
 
 // not working
 
