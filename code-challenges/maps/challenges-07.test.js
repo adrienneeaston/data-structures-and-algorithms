@@ -11,8 +11,12 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 const forLoopTwoToThe = (arr) => {
-  let newArray = arr.map((value, index) => 2 ** value);
-  return newArray;
+    let newArray = [];
+    for (let i = 0; i < arr.length; i++) {
+        let newNumber = 2 ** arr[i];
+        newArray.push(newNumber);
+    }
+    return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -22,7 +26,12 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  // Solution code here...
+    let newArray = [];
+    arr.forEach(function(element) {
+        let newNumber = 2 ** element;
+        newArray.push(newNumber);
+    })
+    return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -32,7 +41,8 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  // Solution code here...
+    let newArray = arr.map((value, index) => 2 ** value);
+    return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
