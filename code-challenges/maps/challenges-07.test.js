@@ -11,7 +11,8 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 const forLoopTwoToThe = (arr) => {
-  // Solution code here...
+  let newArray = arr.map((value, index) => 2 ** value);
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
