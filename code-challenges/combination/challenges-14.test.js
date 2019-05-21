@@ -84,7 +84,9 @@ let starWarsData = [{
 }];
 
 let biggerThanLuke = (arr) => {
-  // Solution code here...
+  return arr.filter(obj => {
+    obj.mass > 77
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
