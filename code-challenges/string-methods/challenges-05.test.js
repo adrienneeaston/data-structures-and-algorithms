@@ -82,11 +82,11 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  let foodArray = gruffaloCrumble.ingredients;
-  for (let i = 0; i < foodArray.length; i++) {
-    let foodItem = foodArray[i].slice(1);
-    result.push(foodItem);
-  }
+  recipe.ingredients.forEach((element) => {
+    let sliceOne = element.slice(element.indexOf(' ') + 1);
+    let sliceTwo = sliceOne.slice(sliceOne.indexOf(' ') + 1);
+    result.push(sliceTwo);
+  });
   return result;
 };
 
@@ -100,7 +100,12 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  recipe.ingredients.forEach((string) => {
+    let toArray = string.split(' ');
+    let arraySlice = toArray.slice(2);
+    let arrayJoin = arraySlice.join(' ');
+    result.push(arrayJoin);
+  });
   return result;
 };
 
