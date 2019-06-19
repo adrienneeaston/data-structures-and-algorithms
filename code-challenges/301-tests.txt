@@ -1,0 +1,1271 @@
+FAIL combination/challenges-14.test.js
+  ● Testing challenge 2 › It should return only characters that are bigger than Luke
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected string but received array.
+
+      169 | describe('Testing challenge 2', () => {
+      170 |   test('It should return only characters that are bigger than Luke', () => {
+    > 171 |     expect(biggerThanLuke(starWarsData)).toStrictEqual('Darth Vader - Pex Kylar');
+          |                                          ^
+      172 |     expect(biggerThanLuke([])).toStrictEqual('');
+      173 |   });
+      174 | });
+
+      at Object.toStrictEqual (code-challenges/combination/challenges-14.test.js:171:42)
+
+  ● Testing challenge 3 › It should sort items by a price
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      181 |       {name: 'Bookmark', price: 2.50},
+      182 |       {name: 'Tote bag', price: 15}
+    > 183 |     ])).toStrictEqual([
+          |         ^
+      184 |       {name: 'Bookmark', price: 2.50},
+      185 |       {name: 'Tote bag', price: 15},
+      186 |       {name: 'Sweatshirt', price: 45},
+
+      at Object.toStrictEqual (code-challenges/combination/challenges-14.test.js:183:9)
+
+  ● Testing challenge 3 › It should sort items by name
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      195 |       {name: 'Bookmark', price: 2.50},
+      196 |       {name: 'Tote bag', price: 15}
+    > 197 |     ])).toStrictEqual([
+          |         ^
+      198 |       {name: 'Bookmark', price: 2.50},
+      199 |       {name: 'Sweatshirt', price: 45},
+      200 |       {name: 'Tote bag', price: 15},
+
+      at Object.toStrictEqual (code-challenges/combination/challenges-14.test.js:197:9)
+
+  ● Testing challenge 4 › It should check if url is https
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: undefined
+
+    Difference:
+
+      Comparing two different types of values. Expected boolean but received undefined.
+
+      206 |   test('It should check if url is https', () => {
+      207 | 
+    > 208 |     expect(isSecure('http://www.insecure.com')).toBe(false);
+          |                                                 ^
+      209 |     expect(isSecure('https://secure.com')).toBe(true);
+      210 |     expect(isSecure('https:/missingslash.org')).toBe(false);
+      211 |   });
+
+      at Object.toBe (code-challenges/combination/challenges-14.test.js:208:49)
+
+  ● Testing challenge 5 › It should return true if there are three in a row
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected boolean but received undefined.
+
+      214 | describe('Testing challenge 5', () => {
+      215 |   test('It should return true if there are three in a row', () => {
+    > 216 |     expect(detectTicTacToeWin([['X', '', 'O'], ['X', 'O', ''], ['X', 'O', 'X']])).toStrictEqual(true);
+          |                                                                                   ^
+      217 |     expect(detectTicTacToeWin([['O', '', 'X'], ['X', 'O', 'X'], ['X', '', 'O']])).toStrictEqual(true);
+      218 |   });
+      219 | 
+
+      at Object.toStrictEqual (code-challenges/combination/challenges-14.test.js:216:83)
+
+  ● Testing challenge 5 › It should return false if there are not three in a row
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected boolean but received undefined.
+
+      219 | 
+      220 |   test('It should return false if there are not three in a row', () => {
+    > 221 |     expect(detectTicTacToeWin([['X', '', 'O'], ['O', 'O', ''], ['X', 'O', 'X']])).toStrictEqual(false);
+          |                                                                                   ^
+      222 |   });
+      223 | 
+      224 |   test('It should not treat empty 3 in row as winner', () => {
+
+      at Object.toStrictEqual (code-challenges/combination/challenges-14.test.js:221:83)
+
+  ● Testing challenge 5 › It should not treat empty 3 in row as winner
+
+    expect(received).toEqual(expected)
+
+    Expected: false
+    Received: undefined
+
+      223 | 
+      224 |   test('It should not treat empty 3 in row as winner', () => {
+    > 225 |     expect(detectTicTacToeWin([['', '', ''], ['O', 'O', ''], ['X', 'O', 'X']])).toEqual(false);
+          |                                                                                 ^
+      226 |   });
+      227 | });
+
+      at Object.toEqual (code-challenges/combination/challenges-14.test.js:225:81)
+
+FAIL two-dimensional-arrays/challenges-12.test.js
+  ● Testing challenge 2 › It should create an object of data for each store
+
+    ReferenceError: salesData is not defined
+
+      222 | describe('Testing challenge 2', () => {
+      223 |   test('It should create an object of data for each store', () => {
+    > 224 |     expect(salesData(hoursOpen, grandTotal(cookieStores))).toStrictEqual([
+          |     ^
+      225 |       { sales: '88 cookies', time: '9 a.m.' },
+      226 |       { sales: '153 cookies', time: '10 a.m.' },
+      227 |       { sales: '252 cookies', time: '11 a.m.' },
+
+      at Object.expect (code-challenges/two-dimensional-arrays/challenges-12.test.js:224:5)
+
+  ● Testing challenge 4 › It should return "hit" when it hits a boat
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected string but received undefined.
+
+      257 | 
+      258 |   test('It should return "hit" when it hits a boat', () => {
+    > 259 |     expect(battleship(battleshipData, 0, 0)).toStrictEqual('hit');
+          |                                              ^
+      260 |     expect(battleship(battleshipData, 1, 0)).toStrictEqual('hit');
+      261 |   });
+      262 | 
+
+      at Object.toStrictEqual (code-challenges/two-dimensional-arrays/challenges-12.test.js:259:46)
+
+  ● Testing challenge 4 › It should return "miss" when it doesn't hit a boat
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected string but received undefined.
+
+      262 | 
+      263 |   test('It should return "miss" when it doesn\'t hit a boat', () => {
+    > 264 |     expect(battleship(battleshipData, 0, 1)).toStrictEqual('miss');
+          |                                              ^
+      265 |     expect(battleship(battleshipData, 3, 0)).toStrictEqual('miss');
+      266 |   });
+      267 | });
+
+      at Object.toStrictEqual (code-challenges/two-dimensional-arrays/challenges-12.test.js:264:46)
+
+  ● Testing challenge 5 › It should multiply all the numbers together
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected number but received undefined.
+
+      269 | describe('Testing challenge 5', () => {
+      270 |   test('It should multiply all the numbers together', () => {
+    > 271 |     expect(calculateProduct([[1,2], [3,4], [5,6]])).toStrictEqual(720);
+          |                                                     ^
+      272 |   });
+      273 | 
+      274 |   test('It should return zero if there are any zeroes in the data', () => {
+
+      at Object.toStrictEqual (code-challenges/two-dimensional-arrays/challenges-12.test.js:271:53)
+
+  ● Testing challenge 5 › It should return zero if there are any zeroes in the data
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected number but received undefined.
+
+      273 | 
+      274 |   test('It should return zero if there are any zeroes in the data', () => {
+    > 275 |     expect(calculateProduct([[2, 3, 4, 6, 0], [4, 3, 7], [2, 4, 6]])).toStrictEqual(0);
+          |                                                                       ^
+      276 |   });
+      277 |   test('It should work even if some of the arrays contain no numbers', () => {
+      278 |     expect(calculateProduct([[1,2], [], [3,4,5]])).toStrictEqual(120);
+
+      at Object.toStrictEqual (code-challenges/two-dimensional-arrays/challenges-12.test.js:275:71)
+
+  ● Testing challenge 5 › It should work even if some of the arrays contain no numbers
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected number but received undefined.
+
+      276 |   });
+      277 |   test('It should work even if some of the arrays contain no numbers', () => {
+    > 278 |     expect(calculateProduct([[1,2], [], [3,4,5]])).toStrictEqual(120);
+          |                                                    ^
+      279 |   });
+      280 | });
+      281 | 
+
+      at Object.toStrictEqual (code-challenges/two-dimensional-arrays/challenges-12.test.js:278:52)
+
+  ● Testing challenge 6 › It should calculate and return the average temperature of the data set
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected number but received undefined.
+
+      282 | describe('Testing challenge 6', () => {
+      283 |   test('It should calculate and return the average temperature of the data set', () => {
+    > 284 |     expect(averageDailyTemperature(weeklyTemperatures)).toStrictEqual(60.25);
+          |                                                         ^
+      285 |   });
+      286 | });
+      287 | 
+
+      at Object.toStrictEqual (code-challenges/two-dimensional-arrays/challenges-12.test.js:284:57)
+
+  ● Testing challenge 7 › It should return the lowest weekly average temperature within the data set
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected number but received undefined.
+
+      288 | describe('Testing challenge 7', () => {
+      289 |   test('It should return the lowest weekly average temperature within the data set', () => {
+    > 290 |     expect(lowestWeeklyAverage(weeklyTemperatures)).toStrictEqual(57);
+          |                                                     ^
+      291 |     expect(lowestWeeklyAverage(lowestWeeklyTemperatureData)).toStrictEqual(46);
+      292 |   });
+      293 | });
+
+      at Object.toStrictEqual (code-challenges/two-dimensional-arrays/challenges-12.test.js:290:53)
+
+  ● Testing challenge 8 › It should return the total count for each row
+
+    TypeError: Cannot read property 'length' of undefined
+
+      296 |   test('It should return the total count for each row', () => {
+      297 |     let result = excel('1,1,1\n4,4,4\n9,9,9');
+    > 298 |     expect(result.length).toStrictEqual(3);
+          |                   ^
+      299 |     expect(result[0]).toStrictEqual(3);
+      300 |     expect(result[1]).toStrictEqual(12);
+      301 |     expect(result[2]).toStrictEqual(27);
+
+      at Object.length (code-challenges/two-dimensional-arrays/challenges-12.test.js:298:19)
+
+FAIL filter/challenges-08.test.js
+  ● Testing challenge 4 › It should return an array containing the stats that are greater than the input
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      223 | describe('Testing challenge 4', () => {
+      224 |   test('It should return an array containing the stats that are greater than the input', () => {
+    > 225 |     expect(getBaseStatGreaterThan(snorlaxData.stats, 75)).toStrictEqual([ { stat: { url: 'https://pokeapi.co/api/v2/stat/5/', name: 'special-defense' }, effort: 2, baseStat: 110 } ]);
+          |                                                           ^
+      226 |     expect(getBaseStatGreaterThan(snorlaxData.stats, 75).length).toStrictEqual(1);
+      227 |     expect(getBaseStatGreaterThan(snorlaxData.stats, 110)).toStrictEqual([]);
+      228 |   });
+
+      at Object.toStrictEqual (code-challenges/filter/challenges-08.test.js:225:59)
+
+  ● Testing challenge 4 › It should work for non-Snorlax data
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      228 |   });
+      229 |   test('It should work for non-Snorlax data', () => {
+    > 230 |     expect(getBaseStatGreaterThan([{baseStat: 10}, {baseStat: -85}, {baseStat: 0}, {baseStat: -50}], -60)).toStrictEqual([{baseStat: 10}, {baseStat: 0}, {baseStat: -50}]);
+          |                                                                                                            ^
+      231 |   });
+      232 | });
+      233 | 
+
+      at Object.toStrictEqual (code-challenges/filter/challenges-08.test.js:230:108)
+
+  ● Testing challenge 5 › It should return the name of the stats that exceed that maximum
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      234 | describe('Testing challenge 5', () => {
+      235 |   test('It should return the name of the stats that exceed that maximum', () => {
+    > 236 |     expect(getStatName(snorlaxData.stats, 50)).toStrictEqual([ 'special-defense', 'special-attack' ]);
+          |                                                ^
+      237 |     expect(getStatName(snorlaxData.stats, 50).length).toStrictEqual(2);
+      238 |   });
+      239 | 
+
+      at Object.toStrictEqual (code-challenges/filter/challenges-08.test.js:236:48)
+
+  ● Testing challenge 5 › It should return the name of the stats that exceed that maximum
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      239 | 
+      240 |   test('It should return the name of the stats that exceed that maximum', () => {
+    > 241 |     expect(getStatName(snorlaxData.stats, 120)).toStrictEqual([]);
+          |                                                 ^
+      242 |     expect(getStatName(snorlaxData.stats, 120).length).toStrictEqual(0);
+      243 |   });
+      244 | 
+
+      at Object.toStrictEqual (code-challenges/filter/challenges-08.test.js:241:49)
+
+  ● Testing challenge 5 › It should work for non-snorlax data
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      249 |       {baseStat: 0, stat: {name: 'three'}},
+      250 |       {baseStat: -50, stat: {name: 'four'}}
+    > 251 |     ], -60)).toStrictEqual(['one', 'three', 'four']);
+          |              ^
+      252 |   });
+      253 | });
+      254 | 
+
+      at Object.toStrictEqual (code-challenges/filter/challenges-08.test.js:251:14)
+
+  ● Testing challenge 6 › It should return an array containing characters who do not have children
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      255 | describe('Testing challenge 6', () => {
+      256 |   test('It should return an array containing characters who do not have children', () => {
+    > 257 |     expect(getCharactersWithoutChildren(characters)).toStrictEqual([ { name: 'Sansa', spouse: 'Tyrion', house: 'Stark' }, { name: 'Jon', spouse: null, house: 'Snow' } ]);
+          |                                                      ^
+      258 |     expect(getCharactersWithoutChildren(characters).length).toStrictEqual(2);
+      259 |   });
+      260 | });
+
+      at Object.toStrictEqual (code-challenges/filter/challenges-08.test.js:257:54)
+
+  ● Testing challenge 7 › It should remove non-integers and return "even" or "odd
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      262 | describe('Testing challenge 7', () => {
+      263 |   test('It should remove non-integers and return "even" or "odd', () => {
+    > 264 |     expect(evenOddNumericValues(['Gregor', 2, 4, 1])).toStrictEqual(['even', 'even', 'odd']);
+          |                                                       ^
+      265 |     expect(evenOddNumericValues(['Gregor', 2, 4, 1]).length).toStrictEqual(3);
+      266 |     expect(evenOddNumericValues(['a', 'b', 'c'])).toStrictEqual([]);
+      267 |   });
+
+      at Object.toStrictEqual (code-challenges/filter/challenges-08.test.js:264:55)
+
+  ● Testing challenge 7 › It should not accept strings that look like numbers
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      267 |   });
+      268 |   test('It should not accept strings that look like numbers', () => {
+    > 269 |     expect(evenOddNumericValues(['1', 2, 3, '4', 5,'6'])).toStrictEqual(['even', 'odd', 'odd']);
+          |                                                           ^
+      270 |   });
+      271 | });
+
+      at Object.toStrictEqual (code-challenges/filter/challenges-08.test.js:269:59)
+
+
+  ● Testing challenge 6 › It should sort numbers by their length
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+    - Expected
+    + Received
+
+      Array [
+    -   1,
+        10,
+        2.8,
+    +   1,
+        -47.75,
+      ]
+
+      234 | describe('Testing challenge 6', () => {
+      235 |   test('It should sort numbers by their length', () => {
+    > 236 |     expect(sortNumbersByLength([10, 2.8, 1, -47.75])).toStrictEqual([1, 10, 2.8, -47.75]);
+          |                                                       ^
+      237 |     expect(sortNumbersByLength([100, 2.82, 1, -47.75])).toStrictEqual([1, 100, 2.82, -47.75]);
+      238 |     expect(sortNumbersByLength([1,2,3])).toEqual(expect.arrayContaining([1,2,3]));
+      239 |   });
+
+      at Object.toStrictEqual (301/sort/challenges-03.test.js:236:55)
+
+  ● Testing challenge 7 › It should sort people by their last names
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      242 | describe('Testing challenge 7', () => {
+      243 |   test('It should sort people by their last names', () => {
+    > 244 |     expect(sortPeople(people)).toStrictEqual([
+          |                                ^
+      245 |       new Person('Casey', 'Codefellow', 38),
+      246 |       new Person('Stan', 'Seattle', 67),
+      247 |       new Person('Wes', 'Washington', 25),
+
+      at Object.toStrictEqual (301/sort/challenges-03.test.js:244:32)
+
+  ● Testing challenge 8 › It should sort people with more strict ordering
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      261 |       new Person('Carol', 'Codefellow', 88),
+      262 |     ];
+    > 263 |     expect(sortPeopleBetter(family)).toStrictEqual([
+          |                                      ^
+      264 |       new Person('Carol', 'Codefellow', 88),
+      265 |       new Person('Casey', 'Codefellows', 37),
+      266 |       new Person('Casey', 'Codefellows', 55),
+
+      at Object.toStrictEqual (301/sort/challenges-03.test.js:263:38)
+
+  ● Testing challenge 9 › It should sort meetings by the day on which they happen
+
+    TypeError: Cannot read property 'slice' of undefined
+
+      276 |   test('It should sort meetings by the day on which they happen', () => {
+      277 |     const sortedMeetings = sortMeetingsByDay(meetings);
+    > 278 |     expect(sortedMeetings.slice(0,2)).toEqual(expect.arrayContaining([new Meeting('Monday', '0900', '0945'), new Meeting('Monday', '0900', '1000')]));
+          |                           ^
+      279 |     expect(sortedMeetings[2]).toStrictEqual(new Meeting('Tuesday', '1145', '1315'));
+      280 |     expect(sortedMeetings.slice(3,5)).toEqual(expect.arrayContaining([new Meeting('Wednesday', '0930', '1000'), new Meeting('Wednesday', '1300', '1500')]));
+      281 |     expect(sortedMeetings[5]).toStrictEqual(new Meeting('Friday', '1200', '1345'));
+
+      at Object.slice (301/sort/challenges-03.test.js:278:27)
+
+  ● Testing challenge 10 › It should sort meetings by when they happen
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      285 | describe('Testing challenge 10', () => {
+      286 |   test('It should sort meetings by when they happen', () => {
+    > 287 |     expect(sortSchedule(meetings)).toStrictEqual([
+          |                                    ^
+      288 |       new Meeting('Monday', '0900', '0945'),
+      289 |       new Meeting('Monday', '0900', '1000'),
+      290 |       new Meeting('Tuesday', '1145', '1315'),
+
+      at Object.toStrictEqual (301/sort/challenges-03.test.js:287:36)
+
+FAIL reduce/challenges-09.test.js
+  ● Testing challenge 3 › It should return the string with the characters in reverse order
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected string but received undefined.
+
+      262 | describe('Testing challenge 3', () => {
+      263 |   test('It should return the string with the characters in reverse order', () => {
+    > 264 |     expect(reversedString('Code 301')).toStrictEqual('103 edoC');
+          |                                        ^
+      265 |   });
+      266 | });
+      267 | 
+
+      at Object.toStrictEqual (code-challenges/reduce/challenges-09.test.js:264:40)
+
+  ● Testing challenge 4 › It should return the total number of children
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected number but received undefined.
+
+      268 | describe('Testing challenge 4', () => {
+      269 |   test('It should return the total number of children', () => {
+    > 270 |     expect(countNumberOfChildren(characters)).toStrictEqual(14);
+          |                                               ^
+      271 |   });
+      272 | });
+      273 | 
+
+      at Object.toStrictEqual (code-challenges/reduce/challenges-09.test.js:270:47)
+
+  ● Testing challenge 5 › It should return the average of the numbers in the array
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected number but received undefined.
+
+      274 | describe('Testing challenge 5', () => {
+      275 |   test('It should return the average of the numbers in the array', () => {
+    > 276 |     expect(calculateAverage([18, 290, 37, 4, 55, 16, 7, 85 ])).toStrictEqual(64);
+          |                                                                ^
+      277 |   });
+      278 | });
+      279 | 
+
+      at Object.toStrictEqual (code-challenges/reduce/challenges-09.test.js:276:64)
+
+  ● Testing challenge 6 › It should return a count of the prime numbers in the array
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected number but received undefined.
+
+      280 | describe('Testing challenge 6', () => {
+      281 |   test('It should return a count of the prime numbers in the array', () => {
+    > 282 |     expect(countPrimeNumbers([1, 2, 13, 64, 45, 56, 17, 8])).toStrictEqual(3);
+          |                                                              ^
+      283 |   });
+      284 | });
+      285 | 
+
+      at Object.toStrictEqual (code-challenges/reduce/challenges-09.test.js:282:62)
+
+  ● Testing challenge 7 › It should return any stats that match the input
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected object but received undefined.
+
+      286 | describe('Testing challenge 7', () => {
+      287 |   test('It should return any stats that match the input', () => {
+    > 288 |     expect(extractStat('speed', snorlaxData.stats)).toStrictEqual({ stat: { url: 'https://pokeapi.co/api/v2/stat/6/', name: 'speed' }, effort: 5, baseStat: 30 });
+          |                                                     ^
+      289 |   });
+      290 | });
+      291 | 
+
+      at Object.toStrictEqual (code-challenges/reduce/challenges-09.test.js:288:53)
+
+  ● Testing challenge 8 › It should return an array containing the names of the children
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      292 | describe('Testing challenge 8', () => {
+      293 |   test('It should return an array containing the names of the children', () => {
+    > 294 |     expect(extractChildren(characters)).toStrictEqual([ 'Robb', 'Sansa', 'Arya', 'Bran', 'Rickon', 'Drogon', 'Rhaegal', 'Viserion', 'Margaery', 'Loras' ]);
+          |                                         ^
+      295 |     expect(extractChildren(characters).length).toStrictEqual(10);
+      296 |   });
+      297 | });
+
+      at Object.toStrictEqual (code-challenges/reduce/challenges-09.test.js:294:41)
+
+FAIL string-methods/challenges-05.test.js
+  ● Console
+
+    console.log string-methods/challenges-05.test.js:170
+      [ 'Gregor' ]
+    console.log string-methods/challenges-05.test.js:170
+      [ 'hello' ]
+    console.log string-methods/challenges-05.test.js:170
+      [ 'wowow' ]
+    console.log string-methods/challenges-05.test.js:170
+      [ 'hello' ]
+
+  ● Testing challenge 7 › It should shorten the string based on the first argument
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected string but received array.
+
+      282 | describe('Testing challenge 7', () => {
+      283 |   test('It should shorten the string based on the first argument', () => {
+    > 284 |     expect(removeLastCharacters('Gregor', 2)).toStrictEqual('Greg');
+          |                                               ^
+      285 |     expect(removeLastCharacters('Gregor', 2).length).toStrictEqual(4);
+      286 |   });
+      287 |   test('It should return the complete string when passed a negative number', () => {
+
+      at Object.toStrictEqual (code-challenges/string-methods/challenges-05.test.js:284:47)
+
+  ● Testing challenge 7 › It should return an empty string when called with a number larger than the string length
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+    - Expected
+    + Received
+
+    - 
+    +  
+
+      290 |   });
+      291 |   test('It should return an empty string when called with a number larger than the string length', () => {
+    > 292 |     expect(removeLastCharacters('hello', 12)).toStrictEqual('');
+          |                                               ^
+      293 |     expect(removeLastCharacters('', 1)).toStrictEqual('');
+      294 |     expect(removeLastCharacters('a', 1)).toStrictEqual('');
+      295 |   });
+
+      at Object.toStrictEqual (code-challenges/string-methods/challenges-05.test.js:292:47)
+
+  ● Testing challenge 8 › It should add up the numbers contained within the string
+
+    expect(received).toStrictEqual(expected)
+
+      298 | describe('Testing challenge 8', () => {
+      299 |   test('It should add up the numbers contained within the string', () => {
+    > 300 |     expect(totalSumCSV('1,4,5,7,2')).toStrictEqual(19);
+          |                                      ^
+      301 |     expect(totalSumCSV('147')).toStrictEqual(147);
+      302 |   });
+      303 | });
+
+      at Object.toStrictEqual (code-challenges/string-methods/challenges-05.test.js:300:38)
+
+  ● Testing challenge 9 › It should return the string without vowels
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected string but received undefined.
+
+      305 | describe('Testing challenge 9', () => {
+      306 |   test('It should return the string without vowels', () => {
+    > 307 |     expect(removeVowels('gregor')).toStrictEqual('grgr');
+          |                                    ^
+      308 |     expect(removeVowels('gregor').length).toStrictEqual(4);
+      309 |     expect(removeVowels('asdf')).toStrictEqual('sdf');
+      310 |     expect(removeVowels('why')).toStrictEqual('why');
+
+      at Object.toStrictEqual (code-challenges/string-methods/challenges-05.test.js:307:36)
+
+  ● Testing challenge 10 › It should return the string without vowels
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      314 | describe('Testing challenge 10', () => {
+      315 |   test('It should return the string without vowels', () => {
+    > 316 |     expect(extractVowels('gregor')).toStrictEqual(['grgr', 'eo']);
+          |                                     ^
+      317 |     expect(extractVowels('gregor').length).toStrictEqual(2);
+      318 | 
+      319 |     expect(extractVowels('The quick brown fox')).toStrictEqual(['Th qck brwn fx', 'eioou']);
+
+      at Object.toStrictEqual (code-challenges/string-methods/challenges-05.test.js:316:37)
+
+FAIL chaining-methods/challenges-10.test.js
+  ● Testing challenge 3 › It should return numbers divisible by five, then raise two to the power of the resulting numbers
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      166 | describe('Testing challenge 3', () => {
+      167 |   test('It should return numbers divisible by five, then raise two to the power of the resulting numbers', () => {
+    > 168 |     expect(divisibleByFiveTwoToThePower([[10, 20, 5, 4], [5, 6, 7, 9], [1, 10, 3]])).toStrictEqual([[1024, 1048576, 32], [32], [1024]]);
+          |                                                                                      ^
+      169 |   });
+      170 | 
+      171 |   test('It should return an empty array if none of the numbers are divisible by five', () => {
+
+      at Object.toStrictEqual (code-challenges/chaining-methods/challenges-10.test.js:168:86)
+
+  ● Testing challenge 3 › It should return an empty array if none of the numbers are divisible by five
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      170 | 
+      171 |   test('It should return an empty array if none of the numbers are divisible by five', () => {
+    > 172 |     expect(divisibleByFiveTwoToThePower([[1, 2, 3], [5, 10, 15]])).toStrictEqual([[], [32, 1024, 32768]]);
+          |                                                                    ^
+      173 |   });
+      174 | 
+      175 |   test('It should return an empty array if the values are not numbers', () => {
+
+      at Object.toStrictEqual (code-challenges/chaining-methods/challenges-10.test.js:172:68)
+
+  ● Testing challenge 3 › It should return an empty array if the values are not numbers
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      174 | 
+      175 |   test('It should return an empty array if the values are not numbers', () => {
+    > 176 |     expect(divisibleByFiveTwoToThePower([['one', 'two', 'five'], ['5', '10', '15'], [5]])).toStrictEqual([[], [], [32]]);
+          |                                                                                            ^
+      177 |   });
+      178 | });
+      179 | 
+
+      at Object.toStrictEqual (code-challenges/chaining-methods/challenges-10.test.js:176:92)
+
+  ● Testing challenge 4 › It should return only characters that are male or female
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected string but received undefined.
+
+      180 | describe('Testing challenge 4', () => {
+      181 |   test('It should return only characters that are male or female', () => {
+    > 182 |     expect(findMaleAndFemale(starWarsData)).toStrictEqual('Luke Skywalker and Darth Vader and Leia Organa');
+          |                                             ^
+      183 |     expect(findMaleAndFemale([{ name: 'person', gender: 'female' }, { gender: 'lol' }, { name: 'persontwo', gender: 'male' }])).toStrictEqual('person and persontwo');
+      184 |   });
+      185 | });
+
+      at Object.toStrictEqual (code-challenges/chaining-methods/challenges-10.test.js:182:45)
+
+  ● Testing challenge 5 › It should return the name of the shortest character
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected string but received undefined.
+
+      187 | describe('Testing challenge 5', () => {
+      188 |   test('It should return the name of the shortest character', () => {
+    > 189 |     expect(findShortest(starWarsData)).toStrictEqual('R2-D2');
+          |                                        ^
+      190 |   });
+      191 | });
+
+      at Object.toStrictEqual (code-challenges/chaining-methods/challenges-10.test.js:189:40)
+
+FAIL regularexpressions2/challenges-11.test.js
+  ● Testing challenge 2 › It should match a basic email
+
+    expect(received).toBeTruthy()
+
+    Received: undefined
+
+      101 | describe('Testing challenge 2', () => {
+      102 |   test('It should match a basic email', () => {
+    > 103 |     expect(validateEmail('joe@codefellows.com')).toBeTruthy();
+          |                                                  ^
+      104 |   });
+      105 | 
+      106 |   test('It should match if the email contains a period', () => {
+
+      at Object.toBeTruthy (code-challenges/regularexpressions2/challenges-11.test.js:103:50)
+
+  ● Testing challenge 2 › It should match if the email contains a period
+
+    expect(received).toBeTruthy()
+
+    Received: undefined
+
+      105 | 
+      106 |   test('It should match if the email contains a period', () => {
+    > 107 |     expect(validateEmail('joe.schmoe@codefellows.net')).toBeTruthy();
+          |                                                         ^
+      108 |   });
+      109 | 
+      110 |   test('It should match if the email contains other top-level domains', () => {
+
+      at Object.toBeTruthy (code-challenges/regularexpressions2/challenges-11.test.js:107:57)
+
+  ● Testing challenge 2 › It should match if the email contains other top-level domains
+
+    expect(received).toBeTruthy()
+
+    Received: undefined
+
+      109 | 
+      110 |   test('It should match if the email contains other top-level domains', () => {
+    > 111 |     expect(validateEmail('joe@codefellows.org')).toBeTruthy();
+          |                                                  ^
+      112 |   });
+      113 | 
+      114 |   test('It should match if the email contains a period and other top-level domains', () => {
+
+      at Object.toBeTruthy (code-challenges/regularexpressions2/challenges-11.test.js:111:50)
+
+  ● Testing challenge 2 › It should match if the email contains a period and other top-level domains
+
+    expect(received).toBeTruthy()
+
+    Received: undefined
+
+      113 | 
+      114 |   test('It should match if the email contains a period and other top-level domains', () => {
+    > 115 |     expect(validateEmail('joe.schmoe@codefellows.net')).toBeTruthy();
+          |                                                         ^
+      116 |   });
+      117 | 
+      118 |   test ('It should fail things that aren\'t email addresses', () => {
+
+      at Object.toBeTruthy (code-challenges/regularexpressions2/challenges-11.test.js:115:57)
+
+  ● Testing challenge 3 › It should match the acceptable phone number formats
+
+    expect(received).toBeTruthy()
+
+    Received: undefined
+
+      131 | describe('Testing challenge 3', () => {
+      132 |   test('It should match the acceptable phone number formats', () => {
+    > 133 |     expect(validatePhoneNumber('(555) 555-5555')).toBeTruthy();
+          |                                                   ^
+      134 |     expect(validatePhoneNumber('555 555-5555')).toBeTruthy();
+      135 |     expect(validatePhoneNumber('555-555-5555')).toBeTruthy();
+      136 |     expect(validatePhoneNumber('555 5555555')).toBeTruthy();
+
+      at Object.toBeTruthy (code-challenges/regularexpressions2/challenges-11.test.js:133:51)
+
+  ● Testing challenge 4 › It should return the closing tags
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      155 | describe('Testing challenge 4', () => {
+      156 |   test('It should return the closing tags', () => {
+    > 157 |     expect(findTagNames(['<h1>Hello, world!</h1>', '<p>Welcome to my site</p>'])).toStrictEqual([ '/h1', '/p' ]);
+          |                                                                                   ^
+      158 |   });
+      159 |   test('It should work if there are multiple closing tags in a single string', () => {
+      160 |     expect(findTagNames(['<div><h1>Hello, world!</h1></div>', '<p>Welcome to my site</p>'])).toStrictEqual([ '/h1', '/div', '/p' ]);
+
+      at Object.toStrictEqual (code-challenges/regularexpressions2/challenges-11.test.js:157:83)
+
+  ● Testing challenge 4 › It should work if there are multiple closing tags in a single string
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      158 |   });
+      159 |   test('It should work if there are multiple closing tags in a single string', () => {
+    > 160 |     expect(findTagNames(['<div><h1>Hello, world!</h1></div>', '<p>Welcome to my site</p>'])).toStrictEqual([ '/h1', '/div', '/p' ]);
+          |                                                                                              ^
+      161 |   });
+      162 | });
+
+      at Object.toStrictEqual (code-challenges/regularexpressions2/challenges-11.test.js:160:94)
+
+FAIL regularexpressions/challenges-04.test.js
+  ● Testing challenge 4 › It should match any of the acceptable inputs
+
+    expect(received).toBeTruthy()
+
+    Received: undefined
+
+      159 | describe('Testing challenge 4', () => {
+      160 |   test('It should match any of the acceptable inputs', () => {
+    > 161 |     expect(matchMonth('Oct')).toBeTruthy();
+          |                               ^
+      162 |     expect(matchMonth('oct')).toBeTruthy();
+      163 |     expect(matchMonth('October')).toBeTruthy();
+      164 |     expect(matchMonth('october')).toBeTruthy();
+
+      at Object.toBeTruthy (code-challenges/regularexpressions/challenges-04.test.js:161:31)
+
+  ● Testing challenge 5 › It should only return words that are immediately followed by a space
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      179 | 
+      180 |   test('It should only return words that are immediately followed by a space', () => {
+    > 181 |     expect(noPunctuation(lorem)).toStrictEqual([ 'Lorem ', 'ipsum ', 'dolor ', 'sit ', 'consectetur ', 'adipiscing ', 'Cras ', 'lacinia ', 'vel ', 'massa ', 'sed ', 'Nunc ', 'faucibus ', 'iaculis ', 'a ', 'scelerisque ', 'enim ', 'condimentum ', 'Aenean ', 'ac ', 'scelerisque ', 'et ', 'pharetra ' ]);
+          |                                  ^
+      182 |     expect(noPunctuation(lorem).length).toStrictEqual(23);
+      183 |   });
+      184 | 
+
+      at Object.toStrictEqual (code-challenges/regularexpressions/challenges-04.test.js:181:34)
+
+  ● Testing challenge 5 › It should not contain words that are followed by any non-space character
+
+    expect(received).not.toContain(expected) // indexOf
+
+    Matcher error: received value must not be null nor undefined
+
+    Received has value: undefined
+
+      184 | 
+      185 |   test('It should not contain words that are followed by any non-space character', () => {
+    > 186 |     expect(noPunctuation(lorem)).not.toContain(['amet,', 'elit.', 'egestas.', 'elit,', 'sed.', 'sem,', 'diam.', 'nibh.', 'porttitor.', 'euismod,', 'ultrices.', 'massa,', 'vel,', 'purus.', 'purus,', 'odio.', 'aliquet,', 'non,', 'sem.']);
+          |                                      ^
+      187 |   });
+      188 | });
+      189 | 
+
+      at Object.toContain (code-challenges/regularexpressions/challenges-04.test.js:186:38)
+
+  ● Testing challenge 6 › It should remove the vowels from the hangman string and replace them with underscores
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected string but received undefined.
+
+      192 | 
+      193 |   test('It should remove the vowels from the hangman string and replace them with underscores', () => {
+    > 194 |     expect(hangman(startString)).toStrictEqual('Th_s _s _ r_g_x ch_ll_ng_. W_ _r_ try_ng t_ cr__t_ _ h_ngm_n phr_s_ wh_r_ _ll _f th_ v_w_ls _r_ m_ss_ng!');
+          |                                  ^
+      195 |   });
+      196 | 
+      197 |   test('It should not contain the letters "a", "e", "i", "o", or "u"', () => {
+
+      at Object.toStrictEqual (code-challenges/regularexpressions/challenges-04.test.js:194:34)
+
+  ● Testing challenge 6 › It should not contain the letters "a", "e", "i", "o", or "u"
+
+    expect(received).not.toContain(expected) // indexOf
+
+    Matcher error: received value must not be null nor undefined
+
+    Received has value: undefined
+
+      196 | 
+      197 |   test('It should not contain the letters "a", "e", "i", "o", or "u"', () => {
+    > 198 |     expect(hangman(startString)).not.toContain('a', 'e', 'i', 'o', 'u');
+          |                                      ^
+      199 |   });
+      200 | });
+      201 | 
+
+      at Object.toContain (code-challenges/regularexpressions/challenges-04.test.js:198:38)
+
+  ● Testing challenge 7 › It should return an array of instances of "sells", shells", and "seashells"
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      202 | describe('Testing challenge 7', () => {
+      203 |   test('It should return an array of instances of "sells", shells", and "seashells"', () => {
+    > 204 |     expect(findShells(seashells)).toStrictEqual(['sells', 'seashells', 'shells', 'sells', 'seashells', 'sells', 'shells', 'sells', 'shells']);
+          |                                   ^
+      205 |     expect(findShells(seashells).length).toStrictEqual(9);
+      206 |   });
+      207 | });
+
+      at Object.toStrictEqual (code-challenges/regularexpressions/challenges-04.test.js:204:35)
+
+FAIL sort/challenges-03.test.js
+  ● Testing challenge 6 › It should sort numbers by their length
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+    - Expected
+    + Received
+
+      Array [
+    -   1,
+        10,
+        2.8,
+    +   1,
+        -47.75,
+      ]
+
+      234 | describe('Testing challenge 6', () => {
+      235 |   test('It should sort numbers by their length', () => {
+    > 236 |     expect(sortNumbersByLength([10, 2.8, 1, -47.75])).toStrictEqual([1, 10, 2.8, -47.75]);
+          |                                                       ^
+      237 |     expect(sortNumbersByLength([100, 2.82, 1, -47.75])).toStrictEqual([1, 100, 2.82, -47.75]);
+      238 |     expect(sortNumbersByLength([1,2,3])).toEqual(expect.arrayContaining([1,2,3]));
+      239 |   });
+
+      at Object.toStrictEqual (code-challenges/sort/challenges-03.test.js:236:55)
+
+  ● Testing challenge 7 › It should sort people by their last names
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      242 | describe('Testing challenge 7', () => {
+      243 |   test('It should sort people by their last names', () => {
+    > 244 |     expect(sortPeople(people)).toStrictEqual([
+          |                                ^
+      245 |       new Person('Casey', 'Codefellow', 38),
+      246 |       new Person('Stan', 'Seattle', 67),
+      247 |       new Person('Wes', 'Washington', 25),
+
+      at Object.toStrictEqual (code-challenges/sort/challenges-03.test.js:244:32)
+
+  ● Testing challenge 8 › It should sort people with more strict ordering
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      261 |       new Person('Carol', 'Codefellow', 88),
+      262 |     ];
+    > 263 |     expect(sortPeopleBetter(family)).toStrictEqual([
+          |                                      ^
+      264 |       new Person('Carol', 'Codefellow', 88),
+      265 |       new Person('Casey', 'Codefellows', 37),
+      266 |       new Person('Casey', 'Codefellows', 55),
+
+      at Object.toStrictEqual (code-challenges/sort/challenges-03.test.js:263:38)
+
+  ● Testing challenge 9 › It should sort meetings by the day on which they happen
+
+    TypeError: Cannot read property 'slice' of undefined
+
+      276 |   test('It should sort meetings by the day on which they happen', () => {
+      277 |     const sortedMeetings = sortMeetingsByDay(meetings);
+    > 278 |     expect(sortedMeetings.slice(0,2)).toEqual(expect.arrayContaining([new Meeting('Monday', '0900', '0945'), new Meeting('Monday', '0900', '1000')]));
+          |                           ^
+      279 |     expect(sortedMeetings[2]).toStrictEqual(new Meeting('Tuesday', '1145', '1315'));
+      280 |     expect(sortedMeetings.slice(3,5)).toEqual(expect.arrayContaining([new Meeting('Wednesday', '0930', '1000'), new Meeting('Wednesday', '1300', '1500')]));
+      281 |     expect(sortedMeetings[5]).toStrictEqual(new Meeting('Friday', '1200', '1345'));
+
+      at Object.slice (code-challenges/sort/challenges-03.test.js:278:27)
+
+  ● Testing challenge 10 › It should sort meetings by when they happen
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+      285 | describe('Testing challenge 10', () => {
+      286 |   test('It should sort meetings by when they happen', () => {
+    > 287 |     expect(sortSchedule(meetings)).toStrictEqual([
+          |                                    ^
+      288 |       new Meeting('Monday', '0900', '0945'),
+      289 |       new Meeting('Monday', '0900', '1000'),
+      290 |       new Meeting('Tuesday', '1145', '1315'),
+
+      at Object.toStrictEqual (code-challenges/sort/challenges-03.test.js:287:36)
+
+PASS maps/challenges-07.test.js
+PASS value-vs-reference/challenges-02.test.js
+PASS for-each/challenges-01.test.js
+FAIL objectketsobjectvalues/challenges-06.test.js
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    This usually means that you are trying to import a file which Jest cannot parse, e.g. it's not plain JavaScript.
+
+    By default, if Jest sees a Babel config, it will use that to transform your files, ignoring "node_modules".
+
+    Here's what you can do:
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/en/configuration.html
+
+    Details:
+
+    SyntaxError: /mnt/c/Users/adrienne/codefellows/301/data-structures-and-algorithms/code-challenges/objectketsobjectvalues/challenges-06.test.js: Unexpected token (226:3)
+
+      224 |     expect(houseSurvivors(characters)).toStrictEqual([ { house: 'Stark', members: 6 }, { house: 'Arryn', members: 2 }, { house: 'Lannister', members: 4 }, { house: 'Targaryen', members: 4 }, { house: 'Tyrell', members: 3 }, { house: 'Stark', members: 2 }, { house: 'Snow', members: 1 } ]);
+      225 |   });
+    > 226 | });
+          |    ^
+
+      at Parser.raise (node_modules/@babel/parser/lib/index.js:3851:17)
+      at Parser.unexpected (node_modules/@babel/parser/lib/index.js:5167:16)
+      at Parser.parseExprAtom (node_modules/@babel/parser/lib/index.js:6328:20)
+      at Parser.parseExprSubscripts (node_modules/@babel/parser/lib/index.js:5914:23)
+      at Parser.parseMaybeUnary (node_modules/@babel/parser/lib/index.js:5894:21)
+      at Parser.parseExprOps (node_modules/@babel/parser/lib/index.js:5781:23)
+      at Parser.parseMaybeConditional (node_modules/@babel/parser/lib/index.js:5754:23)
+      at Parser.parseMaybeAssign (node_modules/@babel/parser/lib/index.js:5701:21)
+      at Parser.parseExpression (node_modules/@babel/parser/lib/index.js:5649:23)
+      at Parser.parseStatementContent (node_modules/@babel/parser/lib/index.js:7420:23)
+
+FAIL ../301/objectketsobjectvalues/challenges-06.test.js
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    This usually means that you are trying to import a file which Jest cannot parse, e.g. it's not plain JavaScript.
+
+    By default, if Jest sees a Babel config, it will use that to transform your files, ignoring "node_modules".
+
+    Here's what you can do:
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/en/configuration.html
+
+    Details:
+
+    SyntaxError: /mnt/c/Users/adrienne/codefellows/301/data-structures-and-algorithms/301/objectketsobjectvalues/challenges-06.test.js: Unexpected token (226:3)
+
+      224 |     expect(houseSurvivors(characters)).toStrictEqual([ { house: 'Stark', members: 6 }, { house: 'Arryn', members: 2 }, { house: 'Lannister', members: 4 }, { house: 'Targaryen', members: 4 }, { house: 'Tyrell', members: 3 }, { house: 'Stark', members: 2 }, { house: 'Snow', members: 1 } ]);
+      225 |   });
+    > 226 | });
+          |    ^
+
+      at Parser.raise (node_modules/@babel/parser/lib/index.js:3851:17)
+      at Parser.unexpected (node_modules/@babel/parser/lib/index.js:5167:16)
+      at Parser.parseExprAtom (node_modules/@babel/parser/lib/index.js:6328:20)
+      at Parser.parseExprSubscripts (node_modules/@babel/parser/lib/index.js:5914:23)
+      at Parser.parseMaybeUnary (node_modules/@babel/parser/lib/index.js:5894:21)
+      at Parser.parseExprOps (node_modules/@babel/parser/lib/index.js:5781:23)
+      at Parser.parseMaybeConditional (node_modules/@babel/parser/lib/index.js:5754:23)
+      at Parser.parseMaybeAssign (node_modules/@babel/parser/lib/index.js:5701:21)
+      at Parser.parseExpression (node_modules/@babel/parser/lib/index.js:5649:23)
+      at Parser.parseStatementContent (node_modules/@babel/parser/lib/index.js:7420:23)
+
+FAIL includes-charat/challenges-13.test.js
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    This usually means that you are trying to import a file which Jest cannot parse, e.g. it's not plain JavaScript.
+
+    By default, if Jest sees a Babel config, it will use that to transform your files, ignoring "node_modules".
+
+    Here's what you can do:
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/en/configuration.html
+
+    Details:
+
+    SyntaxError: /mnt/c/Users/adrienne/codefellows/301/data-structures-and-algorithms/code-challenges/includes-charat/challenges-13.test.js: Unexpected token (37:20)
+
+      35 | 
+      36 | const standardizePhoneNumbers = (arr) => {
+    > 37 |   arr.map(string => )
+         |                     ^
+      38 | };
+      39 | 
+      40 | /* ------------------------------------------------------------------------------------------------
+
+      at Parser.raise (node_modules/@babel/parser/lib/index.js:3851:17)
+      at Parser.unexpected (node_modules/@babel/parser/lib/index.js:5167:16)
+      at Parser.parseExprAtom (node_modules/@babel/parser/lib/index.js:6328:20)
+      at Parser.parseExprSubscripts (node_modules/@babel/parser/lib/index.js:5914:23)
+      at Parser.parseMaybeUnary (node_modules/@babel/parser/lib/index.js:5894:21)
+      at Parser.parseExprOps (node_modules/@babel/parser/lib/index.js:5781:23)
+      at Parser.parseMaybeConditional (node_modules/@babel/parser/lib/index.js:5754:23)
+      at Parser.parseMaybeAssign (node_modules/@babel/parser/lib/index.js:5701:21)
+      at Parser.parseFunctionBody (node_modules/@babel/parser/lib/index.js:6891:24)
+      at Parser.parseArrowExpression (node_modules/@babel/parser/lib/index.js:6851:10)
+
+
+----------|----------|----------|----------|----------|-------------------|
+File      |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+----------|----------|----------|----------|----------|-------------------|
+All files |        0 |        0 |        0 |        0 |                   |
+----------|----------|----------|----------|----------|-------------------|
+Test Suites: 15 failed, 3 passed, 18 total
+Tests:       63 failed, 66 passed, 129 total
+Snapshots:   0 total
+Time:        6.422s
+Ran all test suites.
