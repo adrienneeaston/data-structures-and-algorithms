@@ -26,8 +26,19 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
-  // Solution code here...
+  let sum = 0; 
+  input.forEach(array => {
+    sum = sum + array.reduce((accumulator, value) => accumulator + value);
+  });
+  return sum;
 };
+
+// return input.reduce((sum, array) => sum + array.reduce((accumulator, value) => accumulator + value));
+
+  
+//   let first = input.forEach(element => element.reduce((accumulator, value) => {return accumulator + value}, 0));
+//   let second = first.forEach(element => element.reduce((accumulator, value) => {return accumulator + value}, 0));
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
