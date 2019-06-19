@@ -1,0 +1,466 @@
+FAIL code-challenges/objectketsobjectvalues/challenges-06.test.js
+  ● Testing challenge 2 › It should return an array of the names of the houses
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+    - Expected
+    + Received
+
+      Array [
+    +   Array [
+    +     "Eddard",
+    +     "Catelyn",
+    +     Array [
+    +       "Robb",
+    +       "Sansa",
+    +       "Arya",
+    +       "Bran",
+    +       "Rickon",
+    +     ],
+          "Stark",
+    +   ],
+    +   Array [
+    +     "Jon A.",
+    +     "Lysa",
+    +     Array [
+    +       "Robin",
+    +     ],
+          "Arryn",
+    +   ],
+    +   Array [
+    +     "Cersei",
+    +     "Robert",
+    +     Array [
+    +       "Joffrey",
+    +       "Myrcella",
+    +       "Tommen",
+    +     ],
+          "Lannister",
+    +   ],
+    +   Array [
+    +     "Daenarys",
+    +     "Khal Drogo",
+    +     Array [
+    +       "Drogon",
+    +       "Rhaegal",
+    +       "Viserion",
+    +     ],
+          "Targaryen",
+    +   ],
+    +   Array [
+    +     "Mace",
+    +     "Alerie",
+    +     Array [
+    +       "Margaery",
+    +       "Loras",
+    +     ],
+          "Tyrell",
+    +   ],
+    +   Array [
+    +     "Sansa",
+    +     "Tyrion",
+    +     Array [],
+          "Stark",
+    +   ],
+    +   Array [
+    +     "Jon S.",
+    +     null,
+    +     Array [],
+          "Snow",
+    +   ],
+      ]
+
+  ● Testing challenge 4 › It should return true for characters that have children
+
+    expect(received).toBeTruthy()
+
+    Received: undefined
+
+  ● Testing challenge 5 › It should return the number of characters in the array
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected number but received undefined.
+
+FAIL code-challenges/two-dimensional-arrays/challenges-12.test.js
+  ● Testing challenge 2 › It should create an object of data for each store
+
+    ReferenceError: salesData is not defined
+
+  ● Testing challenge 4 › It should return "hit" when it hits a boat
+
+    TypeError: undefined is not a function
+        at Array.forEach (<anonymous>)
+
+  ● Testing challenge 4 › It should return "miss" when it doesn't hit a boat
+
+    TypeError: undefined is not a function
+        at Array.forEach (<anonymous>)
+
+  ● Testing challenge 5 › It should multiply all the numbers together
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected number but received undefined.
+
+  ● Testing challenge 5 › It should return zero if there are any zeroes in the data
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected number but received undefined.
+
+  ● Testing challenge 5 › It should work even if some of the arrays contain no numbers
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected number but received undefined.
+
+  ● Testing challenge 6 › It should calculate and return the average temperature of the data set
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected number but received undefined.
+
+  ● Testing challenge 7 › It should return the lowest weekly average temperature within the data set
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected number but received undefined.
+
+  ● Testing challenge 8 › It should return the total count for each row
+
+    TypeError: Cannot read property 'length' of undefined
+
+FAIL code-challenges/filter/challenges-08.test.js
+  ● Testing challenge 4 › It should return an array containing the stats that are greater than the input
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+  ● Testing challenge 4 › It should work for non-Snorlax data
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+  ● Testing challenge 5 › It should return the name of the stats that exceed that maximum
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+  ● Testing challenge 5 › It should return the name of the stats that exceed that maximum
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+  ● Testing challenge 5 › It should work for non-snorlax data
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+  ● Testing challenge 6 › It should return an array containing characters who do not have children
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+FAIL code-challenges/sort/challenges-03.test.js
+  ● Testing challenge 6 › It should sort numbers by their length
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+    - Expected
+    + Received
+
+      Array [
+    -   1,
+        10,
+        2.8,
+    +   1,
+        -47.75,
+      ]
+
+  ● Testing challenge 7 › It should sort people by their last names
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+  ● Testing challenge 8 › It should sort people with more strict ordering
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+FAIL code-challenges/includes-charat/challenges-13.test.js
+  ● Testing challenge 3 › It should return a standardized set of phone numbers
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+  ● Testing challenge 4 › It should only return the odd indexed characters from the string
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected string but received undefined.
+
+  ● Testing challenge 5 › It should correctly assess whether all the strings are happy
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected boolean but received undefined.
+
+  ● Testing challenge 7 › It should determine whether all the strings contain a given string
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected boolean but received undefined.
+
+  ● Testing challenge 8 › It should remove Brook from all courses
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+FAIL code-challenges/reduce/challenges-09.test.js
+  ● Testing challenge 3 › It should return the string with the characters in reverse order
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected string but received undefined.
+
+  ● Testing challenge 4 › It should return the total number of children
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected number but received undefined.
+
+  ● Testing challenge 5 › It should return the average of the numbers in the array
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected number but received undefined.
+
+  ● Testing challenge 6 › It should return a count of the prime numbers in the array
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected number but received undefined.
+
+FAIL code-challenges/chaining-methods/challenges-10.test.js
+  ● Testing challenge 3 › It should return numbers divisible by five, then raise two to the power of the resulting numbers
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+  ● Testing challenge 3 › It should return an empty array if none of the numbers are divisible by five
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+  ● Testing challenge 3 › It should return an empty array if the values are not numbers
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+  ● Testing challenge 4 › It should return only characters that are male or female
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected string but received undefined.
+
+  ● Testing challenge 5 › It should return the name of the shortest character
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected string but received undefined.
+
+FAIL code-challenges/combination/challenges-14.test.js
+  ● Testing challenge 2 › It should return only characters that are bigger than Luke
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected string but received array.
+
+  ● Testing challenge 3 › It should sort items by a price
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+  ● Testing challenge 3 › It should sort items by name
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+  ● Testing challenge 4 › It should check if url is https
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: undefined
+
+    Difference:
+
+      Comparing two different types of values. Expected boolean but received undefined.
+
+FAIL code-challenges/regularexpressions/challenges-04.test.js
+  ● Testing challenge 4 › It should match any of the acceptable inputs
+
+    expect(received).toBeTruthy()
+
+    Received: undefined
+
+  ● Testing challenge 5 › It should only return words that are immediately followed by a space
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected array but received undefined.
+
+  ● Testing challenge 5 › It should not contain words that are followed by any non-space character
+
+    expect(received).not.toContain(expected) // indexOf
+
+    Matcher error: received value must not be null nor undefined
+
+    Received has value: undefined
+
+  ● Testing challenge 6 › It should remove the vowels from the hangman string and replace them with underscores
+
+    expect(received).toStrictEqual(expected)
+
+    Difference:
+
+      Comparing two different types of values. Expected string but received undefined.
+
+  ● Testing challenge 6 › It should not contain the letters "a", "e", "i", "o", or "u"
+
+    expect(received).not.toContain(expected) // indexOf
+
+    Matcher error: received value must not be null nor undefined
+
+    Received has value: undefined
+
+FAIL code-challenges/regularexpressions2/challenges-11.test.js
+  ● Testing challenge 2 › It should match a basic email
+
+    expect(received).toBeTruthy()
+
+    Received: undefined
+
+  ● Testing challenge 2 › It should match if the email contains a period
+
+    expect(received).toBeTruthy()
+
+    Received: undefined
+
+  ● Testing challenge 2 › It should match if the email contains other top-level domains
+
+    expect(received).toBeTruthy()
+
+    Received: undefined
+
+  ● Testing challenge 2 › It should match if the email contains a period and other top-level domains
+
+    expect(received).toBeTruthy()
+
+    Received: undefined
+
+  ● Testing challenge 3 › It should match the acceptable phone number formats
+
+    expect(received).toBeTruthy()
+
+    Received: undefined
+
+PASS code-challenges/maps/challenges-07.test.js
+PASS code-challenges/string-methods/challenges-05.test.js
+PASS code-challenges/for-each/challenges-01.test.js
+PASS code-challenges/value-vs-reference/challenges-02.test.js
+----------|----------|----------|----------|----------|-------------------|
+File      |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+----------|----------|----------|----------|----------|-------------------|
+All files |        0 |        0 |        0 |        0 |                   |
+----------|----------|----------|----------|----------|-------------------|
+
+Test Suites: 10 failed, 4 passed, 14 total
+Tests:       49 failed, 19 skipped, 70 passed, 138 total
+Snapshots:   0 total
+Time:        5.967s
+Ran all test suites matching /code-challenges\//i.
