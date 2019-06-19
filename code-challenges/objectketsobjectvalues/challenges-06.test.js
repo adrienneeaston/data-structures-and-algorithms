@@ -75,7 +75,7 @@ const getHouses = (arr) => {
       houses.push(houseName);
   });
   return houses;
-
+}
 // not working
 
 /*------------------------------------------------------------------------------------------------

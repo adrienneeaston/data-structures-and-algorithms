@@ -1,0 +1,35 @@
+These are probably your top priority challenges. The last couple I'm not as sure about since I didn't take too much time looking them over, but the title makes me think they are likely good ones. 
+
+I have included some insights, or "Spoiler hints". Of course learning requires struggle. So give them a try before you look at the "Spoiler hint" sections. If you get stuck for 10-15 minutes on something, for that challenges section unfold (click the little + sign in the margin) for Spoiler hints. None of them are answers. They are some insights on problem solving techniques that may help. 
+
+objectketsobjectvalues (challenges 6)
+  -- Spoiler hint: 
+      Watch out for modifying the array. 
+      If the array is modified by one function, is that going to mess up later functions? 
+chaining (challenges 10}
+  -- You should only need the array & string methods that came before this
+  -- Spoiler hint: 
+      For each section of code (aka how things after applying the method) 
+      say to yourself "Now I have a ___ (a string, an integer, an object, an array of ___, etc)"
+      also perhaps say to yourself a description of that that thing holds or represents. 
+      for example: 
+        let x = [
+                  {name: 'Adrienne', skills: ['javascript', 'give IQ tests', 'social skills']}, 
+                  {name: 'Jay', skills: ['saxophone', 'sodering', 'tube amps', 'video games']},
+              ]
+        x is an array of objects. 
+        x[0] is a single object that has two keys of 'name' and 'skills'
+        x[0].skills is an array of strings that represents things Adrienne has learned. 
+        x[1].skills.join(' ') is a single string (of the skills) for the second object
+        ... etc 
+
+two-dimensional-arrays (challenges 12)
+  -- Spoiler hints: 
+     1) Thinking in a similar way as the hint for challenges 10 may be helpful. 
+     2) If you need to have a for loop inside a for loop, solve the inside loop first. 
+     Basically, ask how would I do this if it was only for the first element of 
+     the big array? ... Okay, now how do I take that same code and do that for the rest?
+     
+includes-charat (challenges 13)
+combination (challenges 14)
+

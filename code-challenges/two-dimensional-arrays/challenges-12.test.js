@@ -123,7 +123,7 @@ The top row of the board is considered row zero and row numbers increase as they
 
 const battleship = (board, row, col) => {
   board.forEach((arr) => {
-    arr.forEach 
+    arr.forEach() 
       if (board[row][col] === '#') {
         return 'hit';
       } else {
