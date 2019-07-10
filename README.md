@@ -19,4 +19,4 @@ Still learning this... <!-- What approach did you take? Why? What is the Big O s
 
 N/A
 
-![Whiteboard photo][https://drive.google.com/open?id=0B0yHRa9eo3_MQmtTTVY0OFNuUFpTZkQyZ18xV09hcWx6Q2t3]
+![Whiteboard photo](assets/11-insertions.jpg)
