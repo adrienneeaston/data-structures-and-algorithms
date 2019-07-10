@@ -52,7 +52,15 @@ class LinkedList{
 
   insertAfter(value, newValue) {
     if(!this.head) {return null;}
-    
+    let current = this.head;
+    while(current.next) {
+      if(current.value === value) {
+        let current = current.next;
+        current.value = newVal;
+        let current = newCurrent;
+        } else {current = current.next;
+      }
+    }
   }
   
 
