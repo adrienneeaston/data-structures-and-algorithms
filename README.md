@@ -19,4 +19,4 @@ Still learning this... <!-- What approach did you take? Why? What is the Big O s
 
 N/A
 
-![Whiteboard photo](assets/11-insertions.jpg)
+![Whiteboard photo](./assets/11-insertions.jpg)
