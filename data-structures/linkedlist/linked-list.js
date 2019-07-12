@@ -88,13 +88,13 @@ class LinkedList{
   // refactor to do...while
 
   kFromTheEnd(k) {
-    if(k >= this.length || k < 0 || typeof k !== number)
-    {return 'exception'};
-    if(k === 0) {return this.list.tail};
-    let i = this.length - k -1;
+    if(k >= this.length || k < 0 || typeof k !== 'number')
+    {return 'exception';}
+    if(k === 0) {return this.tail.value;}
     let current = this.head;
-    while(i < 0) {
-      current = current.head;
+    let i = this.length - k;
+    while(i > 0) {
+      current = current.next;
       i -= 1;
     }
     return current.value;
