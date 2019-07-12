@@ -1,7 +1,5 @@
 'use strict';
 
-import { ModuleMap } from "jest-haste-map";
-
 // import { tsExternalModuleReference, exportAllDeclaration } from "@babel/types";
 
 class Node {
@@ -35,32 +33,32 @@ class LinkedList{
     this.head = current;
   }
 
-  insertBefore(value, newVal) {
-    if(!this.head) {return null;}
-    let current = this.head;
-    while(current.next) {
-      if(current.value === value) {
-        let current = current.next;
-        current.value = newVal;
-        let current = newCurrent;
-        } else {current = current.next;
-      }
-    }
+  // insertBefore(value, newVal) {
+  //   if(!this.head) {return null;}
+  //   let current = this.head;
+  //   while(current.next) {
+  //     if(current.value === value) {
+  //       let current = current.next;
+  //       current.value = newVal;
+  //       let current = newCurrent;
+  //       } else {current = current.next;
+  //     }
+  //   }
 
-  };
+  // };
 
-  insertAfter(value, newValue) {
-    if(!this.head) {return null;}
-    let current = this.head;
-    while(current.next) {
-      if(current.value === value) {
-        let current = current.next;
-        current.value = newVal;
-        let current = newCurrent;
-        } else {current = current.next;
-      }
-    }
-  }
+  // insertAfter(value, newValue) {
+  //   if(!this.head) {return null;}
+  //   let current = this.head;
+  //   while(current.next) {
+  //     if(current.value === value) {
+  //       let current = current.next;
+  //       current.value = newVal;
+  //       let current = newCurrent;
+  //       } else {current = current.next;
+  //     }
+  //   }
+  // }
   
 
   includes(value){
@@ -90,8 +88,8 @@ class LinkedList{
   // refactor to do...while
 
   kFromTheEnd(k) {
-    if(k >= list.length || k < 0 || typeof k !== number)
-    {throw error};
+    if(k >= this.length || k < 0 || typeof k !== number)
+    {return 'exception'};
     if(k === 0) {return this.list.tail};
     let i = this.length - k -1;
     let current = this.head;
