@@ -39,3 +39,7 @@ N/A
 ## Whiteboard
 
 ![Whiteboard photo](./assets/ll_kth_from_list.jpg)
+
+## Link to Code
+
+* [code](https://github.com/adrienneeaston/data-structures-and-algorithms/pull/32)
