@@ -22,7 +22,7 @@ N/A
 
 ## Whiteboard
 
-![Whiteboard photo](./assets/11-insertions.jpg)
+![Whiteboard photo](../../assets/ll-insertions.jpg)
 
 ## Challenge-07
 
@@ -38,7 +38,7 @@ N/A
 
 ## Whiteboard
 
-![Whiteboard photo](./assets/ll_kth_from_list.jpg)
+![Whiteboard photo](../../assets/ll_kth_from_end.jpg)
 
 ## Link to Code
 
