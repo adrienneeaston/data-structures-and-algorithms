@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-
-
 # Singly Linked List
 <!-- Short summary or background information -->
 
