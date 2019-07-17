@@ -46,10 +46,6 @@ N/A
 * [code](https://github.com/adrienneeaston/data-structures-and-algorithms/pull/32)
 
 
-## Whiteboard
-
-![Whiteboard photo](../../assets/ll-insertions.jpg)
-
 ## Challenge-08
 
 Write a function called mergedLists() that takes in two linked lists, merges them together as a zipper, and returns the reference to the head.
