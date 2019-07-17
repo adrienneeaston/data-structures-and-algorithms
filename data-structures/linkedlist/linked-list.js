@@ -17,18 +17,14 @@ class LinkedList{
   }
 
   append(value) {
-    if(!this.head) {
+    if(!this.head && !this.tail) {
       this.head = new Node(value);
+      this.tail = this.head;
       return;
     }
-
-    let current = this.head;
-    while(current.next) {
-      current = current.next;
-    }
-
-    current.next = Node(value);
-    this.tail = current.next;
+    this.tail.next = new Node(value);
+    this.tail = this.tail.next;
+    this.length++;
   }
 
   insert(value) {
@@ -37,32 +33,32 @@ class LinkedList{
     this.head = current;
   }
 
-  insertBefore(value, newVal) {
-    if(!this.head) {return null;}
-    let current = this.head;
-    while(current.next) {
-      if(current.value === value) {
-        let current = current.next;
-        current.value = newVal;
-        let current = newCurrent;
-        } else {current = current.next;
-      }
-    }
+  // insertBefore(value, newVal) {
+  //   if(!this.head) {return null;}
+  //   let current = this.head;
+  //   while(current.next) {
+  //     if(current.value === value) {
+  //       let current = current.next;
+  //       current.value = newVal;
+  //       let current = newCurrent;
+  //       } else {current = current.next;
+  //     }
+  //   }
 
-  };
+  // };
 
-  insertAfter(value, newValue) {
-    if(!this.head) {return null;}
-    let current = this.head;
-    while(current.next) {
-      if(current.value === value) {
-        let current = current.next;
-        current.value = newVal;
-        let current = newCurrent;
-        } else {current = current.next;
-      }
-    }
-  }
+  // insertAfter(value, newValue) {
+  //   if(!this.head) {return null;}
+  //   let current = this.head;
+  //   while(current.next) {
+  //     if(current.value === value) {
+  //       let current = current.next;
+  //       current.value = newVal;
+  //       let current = newCurrent;
+  //       } else {current = current.next;
+  //     }
+  //   }
+  // }
   
 
   includes(value){
@@ -90,34 +86,25 @@ class LinkedList{
     return dataArray.toString();
   };
   // refactor to do...while
-}
 
+  kFromTheEnd(k) {
+    if(k >= this.length || k < 0 || typeof k !== 'number')
+    {return 'exception';}
+    if(k === 0) {return this.tail.value;}
+    let current = this.head;
+    let i = this.length - k;
+    while(i > 0) {
+      current = current.next;
+      i -= 1;
+    }
+    return current.value;
+  };
+};
 
+// let list = new LinkedList;
+// list.append(1);
+// list.append(2);
+// list.append(3);
+// console.log(list.head);
 
-
-// describe('linkedlist', () => {
-//   test('blah should do blah', () => {
-//     let list = new LinkedList();
-//     // add some values to the list
-//     expect(list.head.value).toEqual(1);
-//     expect(list.head.next.value).toEqual(2);
-//     expect(list.head.next.next.value).toEqual(3);
-//     expect(list.head.next.next.next.value).toEqual(4);
-//   });
-
-//   test('list.isEmpty(), should be true for an empty list', () => {
-//     let list = new LinkedList();
-//     expect(list.isEmpty()).toEqual(true);
-//   });
-
-//   test('list.isEmpty() should be false for an unempty list', () => {
-//     let list = new LinkedList();
-//     list.append(1);
-//     expect(list.isEmpty()).toEqual(false);
-//   });
-
-//   test('list.size() should be 0 for an empty list', () => {
-//     let list = new LinkedList();
-//     expect(list.size()).toEqual(0);
-//   });
-// });
+module.exports = LinkedList;
