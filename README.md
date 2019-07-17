@@ -1,9 +1,9 @@
+<<<<<<< HEAD
 
 
 
-// the tracks my learning through 301 and 401
-// table of contents through each code challenge
-// maybe short summaries of each
+# Singly Linked List
+<!-- Short summary or background information -->
 
 ## Challenge-06
 
@@ -13,7 +13,7 @@ Write the following methods for the Linked List class:
 .insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
 .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
 
-## Approach and Efficiency
+## Approach & Efficiency
 
 Still learning this... <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
@@ -46,10 +46,6 @@ N/A
 * [code](https://github.com/adrienneeaston/data-structures-and-algorithms/pull/32)
 
 
-## Whiteboard
-
-![Whiteboard photo](../../assets/ll-insertions.jpg)
-
 ## Challenge-08
 
 Write a function called mergedLists() that takes in two linked lists, merges them together as a zipper, and returns the reference to the head.
@@ -68,5 +64,4 @@ N/A
 
 ## Link to Code
 
-* [code](https://github.com/adrienneeaston/data-structures-and-algorithms/pull/32)
-
+* [code](https://github.com/adrienneeaston/data-structures-and-algorithms/pull/37/)
