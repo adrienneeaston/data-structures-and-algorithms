@@ -32,35 +32,7 @@ class LinkedList{
     current.next = this.head;
     this.head = current;
   }
-
-  // insertBefore(value, newVal) {
-  //   if(!this.head) {return null;}
-  //   let current = this.head;
-  //   while(current.next) {
-  //     if(current.value === value) {
-  //       let current = current.next;
-  //       current.value = newVal;
-  //       let current = newCurrent;
-  //       } else {current = current.next;
-  //     }
-  //   }
-
-  // };
-
-  // insertAfter(value, newValue) {
-  //   if(!this.head) {return null;}
-  //   let current = this.head;
-  //   while(current.next) {
-  //     if(current.value === value) {
-  //       let current = current.next;
-  //       current.value = newVal;
-  //       let current = newCurrent;
-  //       } else {current = current.next;
-  //     }
-  //   }
-  // }
   
-
   includes(value){
     if(!this.head) {return false;}
     let current = this.head;
@@ -86,6 +58,34 @@ class LinkedList{
     return dataArray.toString();
   };
   // refactor to do...while
+
+  insertBefore(value, newVal) {
+    if(!this.head) {return null;}
+    let current = this.head;
+    while(current.next) {
+      if(current.next.value === value) {
+        let newNode = new Node(newValue);
+        let nodeTemp = current.next;
+        current.next = newNode;
+        newNode.next = nodeTemp;
+        return this;
+      } else {current = current.next;}
+    }
+  };
+
+  insertAfter(value, newValue) {
+    if(!this.head) {return null;}
+    let current = this.head;
+    while(current.next) {
+      if(current.next.value === value) {
+        let newNode = new Node(newValue);
+        let nodeTemp = current.next;
+        current.next = newNode;
+        newNode.next = nodeTemp;
+        return this;
+      } else {current = current.next;}
+    }
+  };
 
   kFromTheEnd(k) {
     if(k >= this.length || k < 0 || typeof k !== 'number')
