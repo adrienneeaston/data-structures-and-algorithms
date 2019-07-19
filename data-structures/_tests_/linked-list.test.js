@@ -2,6 +2,91 @@
 
 const LinkedList = require('../linkedlist/linked-list.js');
 
+describe('Linked List tests', () => {
+  it('can successfully instantiate an empty linked list', () => {
+    let list = new LinkedList();
+    expect(list.head).toBeNull();
+    expect(list instanceof LinkedList).toBeTruthy();
+  });
+
+  it('can properly insert into the linked list', () => {
+    let list = new LinkedList();
+    list.insert(1);
+    expect(list.head.value).toEqual(1);
+  });
+
+  it('will have the head property properly point to the first node in the linked list', () => {
+    let list = new LinkedList();
+    list.insert(1);
+    list.insert(2);
+    expect(list.head.value).toEqual(2);
+  });
+
+  it('can properly insert multiple nodes into the linked list', () => {
+    let list = new LinkedList();
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insert(4);
+    expect(list.head.value).toEqual(4);
+    expect(list.head.next.value).toEqual(3);
+    expect(list.head.next.next.value).toEqual(2);
+    expect(list.head.next.next.next.value).toEqual(1);
+  });
+
+  it('will return true when finding a value within the linked list that exists', () => {
+
+  });
+
+  it('will return false when searching for a value in the linked list that does not exist', () => {
+
+  });
+
+  it('can properly return a collection of all the values that exist in the linked list', () => {
+
+  });
+});
+
+describe('insert before or after given value', () => {
+  it('can successfully add a node to the end of the linked list', () => {
+
+  });
+
+  it('can successfully add multiple nodes to the end of a linked list', () => {
+
+  });
+
+  it('can successfully insert a node before a node located in the middle of a linked list', () => {
+    let list = new LinkedList();
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insert(4);
+    insertBefore(3, 5);
+    expect(list.next.next.value).toEqual(5);
+    expect(list.next.next.next.value).toEqual(3);
+  });
+
+  it('can successfully insert a node before the first node of a linked list', () => {
+
+  });
+
+  it('can successfully insert after a node in the middle of the linked list', () => {
+    let list = new LinkedList();
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insert(4);
+    insertAfter(3, 5);
+    expect(list.next.next.value).toEqual(3);
+    expect(list.next.next.next.value).toEqual(5);
+  });
+
+  it('can successfully insert a node after the last node of the linked list', () => {
+
+  });
+});
+
 describe('kFromTheEnd', () => {
   it('returns exception if k is greater than list.length', () => {
     let list = new LinkedList();
