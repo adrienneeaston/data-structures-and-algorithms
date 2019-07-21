@@ -1,14 +1,17 @@
 'use strict';
 
+class Node {
+  constructor() {
+    this.value = value;
+    this.next = null;
+  };
+};
+
 class Stack {
   constructor() {
     this.top = null;
     this.bottom = null;
     this.stack = [];
-  }
-
-  peek() {
-    return this.top;
   }
 
   push(value) {
@@ -20,6 +23,10 @@ class Stack {
     let value = this.stack.pop();
     this.top = this.stack.length - 1;
     return value;
+  }
+
+  peek() {
+    return this.top;
   }
 }
 
