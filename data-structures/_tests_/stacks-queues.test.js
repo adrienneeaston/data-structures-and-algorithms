@@ -1,6 +1,7 @@
-'use strict'
+'use strict';
 
-const LinkedList = require('../linkedlist/linked-list.js');
+const Stack = require('../stacksandqueues/stacks.js');
+const Queue = require('../stacksandqueues/queues.js');
 
 describe('Stacks', () => {
   it('can successfully instantiate an empty stack', () => {
@@ -11,7 +12,12 @@ describe('Stacks', () => {
 
   it('can successfully push onto a stack', () => {
     let stack = new Stack();
-
+    stack.push(1);
+    stack.push(2);
+    stack.push(3);
+    expect(stack.top.value).toEqual(3);
+    expect(stack.top.next.value).toEqual(2);
+    expect(stack.top.next.next.value).toEqual(1);
   });
 
   it('can successfully push multiple values onto a stack', () => {
@@ -38,13 +44,15 @@ describe('Stacks', () => {
 describe('Queues', () => {
   it('can successfully instantiate an empty queue', () => {
     let queue = new Queue();
-    expect(queue.top).toBeNull();
+    expect(queue.front).toBeNull();
     expect(queue instanceof Queue).toBeTruthy();
   });
 
   it('can successfully enqueue into a queue', () => {
     let queue = new Queue();
-
+    queue.enqueue(1);
+    queue.enqueue(2);
+    queue.enqueue(3);
   });
 
   it('can successfully enqueue multiple values into a queue', () => {
