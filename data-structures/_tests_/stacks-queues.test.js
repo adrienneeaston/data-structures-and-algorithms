@@ -22,7 +22,9 @@ describe('Stacks', () => {
 
   it('can successfully push multiple values onto a stack', () => {
     let stack = new Stack();
-    
+    stack.push(1);
+    stack.push(2);
+    stack.push(3);
   });
 
   it('can successfully pop off the stack', () => {

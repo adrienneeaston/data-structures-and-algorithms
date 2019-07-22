@@ -9,6 +9,7 @@ class Node {
 
 class Queue {
   constructor() {
+    this.front = null;
     this.rear = null;
     this.queue = [];
   }
