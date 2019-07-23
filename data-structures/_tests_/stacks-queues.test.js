@@ -13,11 +13,7 @@ describe('Stacks', () => {
   it('can successfully push onto a stack', () => {
     let stack = new Stack();
     stack.push(1);
-    stack.push(2);
-    stack.push(3);
-    expect(stack.top.value).toEqual(3);
-    expect(stack.top.next.value).toEqual(2);
-    expect(stack.top.next.next.value).toEqual(1);
+    expect(stack.top.value).toEqual(1);
   });
 
   it('can successfully push multiple values onto a stack', () => {
@@ -25,21 +21,44 @@ describe('Stacks', () => {
     stack.push(1);
     stack.push(2);
     stack.push(3);
+    stack.push(4);
+    expect(stack.top.value).toEqual(4);
+    expect(stack.top.next.value).toEqual(3);
+    expect(stack.top.next.next.value).toEqual(2);
+    expect(stack.top.next.next.next.value).toEqual(1);
   });
 
   it('can successfully pop off the stack', () => {
     let stack = new Stack();
-    
+    stack.push(1);
+    stack.push(2);
+    stack.push(3);
+    stack.push(4);
+    stack.pop();
+    expect(stack.top.value).toEqual(3);
+    expect(stack.top.next.value).toEqual(2);
+    expect(stack.top.next.next.value).toEqual(1);
   });
 
   it('can successfully empty a stack after multiple pops', () => {
     let stack = new Stack();
-    
+    stack.push(1);
+    stack.push(2);
+    stack.push(3);
+    stack.pop();
+    stack.pop();
+    stack.pop();
+    expect(stack.top).toBe(null);
+    expect(stack.peek()).toBe(null);
   });
 
   it('can successfully peek the next item on the stack', () => {
     let stack = new Stack();
-    
+    stack.push(1);
+    stack.push(2);
+    stack.push(3);
+    let result = stack.peek();
+    expect(result).toEqual(3);
   });
 });
 

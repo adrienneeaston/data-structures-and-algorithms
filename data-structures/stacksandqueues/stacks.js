@@ -1,7 +1,7 @@
 'use strict';
 
 class Node {
-  constructor() {
+  constructor(value) {
     this.value = value;
     this.next = null;
   };
@@ -11,22 +11,24 @@ class Stack {
   constructor() {
     this.top = null;
     this.bottom = null;
-    this.stack = [];
   }
 
   push(value) {
-    this.stack.push(value);
-    this.top = value;
+    let node = new Node(value);
+    node.next = this.top;
+    this.top = node;
+    return this;
   }
 
   pop() {
-    let value = this.stack.pop();
-    this.top = this.stack.length - 1;
-    return value;
+    if(!this.top) {return null;}
+    let popped = this.top.value;
+    this.top = this.top.next;
+    return popped;
   }
 
   peek() {
-    return this.top;
+    return this.top.value;
   }
 };
 
