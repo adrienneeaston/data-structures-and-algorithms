@@ -28,6 +28,7 @@ class Stack {
   }
 
   peek() {
+    if(!this.top) {return null;}
     return this.top.value;
   }
 };
