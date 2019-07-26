@@ -88,24 +88,34 @@ describe('Queues', () => {
   });
 
   it('can successfully dequeue out of a queue the expected value', () => {
-    let stack = new Stack();
-    stack.push(1);
-    stack.push(2);
-    stack.push(3);
-    stack.push(4);
-    stack.pop();
-    expect(stack.top.value).toEqual(3);
-    expect(stack.top.next.value).toEqual(2);
-    expect(stack.top.next.next.value).toEqual(1);
-  });
-
-  it('can successfully peek into a queue, seeing the expected value', () => {
     let queue = new Queue();
-
+    queue.enqueue(1);
+    queue.enqueue(2);
+    queue.enqueue(3);
+    queue.enqueue(4);
+    queue.dequeue();
+    expect(queue.back.value).toEqual(4);
+    expect(queue.back.next.value).toEqual(3);
+    expect(queue.back.next.next.value).toEqual(2);
   });
 
   it('can successfully empty a queue after multiple dequeues', () => {
     let queue = new Queue();
+    queue.enqueue(1);
+    queue.enqueue(2);
+    queue.enqueue(3);
+    queue.dequeue();
+    queue.dequeue();
+    queue.dequeue();
+    expect(queue.front).toBe(null);
+  });
 
+  it('can successfully peek the next item on the queue', () => {
+    let queue = new Queue();
+    queue.enqueue(1);
+    queue.enqueue(2);
+    queue.enqueue(3);
+    let result = queue.peek();
+    expect(result).toEqual(1);
   });
 });

@@ -28,8 +28,8 @@ class Queue {
     // return this;
   }
 
-  denqueue() {
-    if(!this.top) {return null;}
+  dequeue() {
+    // if(!this.top) {return null;}
     let popped = this.front.value;
     this.front = this.front.next;
     return popped;
@@ -43,7 +43,6 @@ class Queue {
   }
   
   peek() {
-    if(!this.front) {return null;}
     return this.front.value;
   
 
