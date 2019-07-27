@@ -1,7 +1,7 @@
 'use strict';
 
 class Node {
-  constructor() {
+  constructor(value) {
     this.value = value;
     this.next = null;
   };
@@ -10,21 +10,32 @@ class Node {
 class Queue {
   constructor() {
     this.front = null;
-    this.rear = null;
-    this.queue = [];
+    this.back = null;
   }
 
   enqueue(value) {
-    this.queue.push(value);
-    this.rear = value;
+    let node = new Node(value);
+    if (!this.front) { 
+      this.front = node;
+      this.back = node;
+    } else {
+      node.next = this.back;
+      this.back = node;
+    }
+    return this;
   }
 
-  denqueue() {
-    return this.queue.shift();
+  dequeue() {
+    if(!this.front) {return null;}
+    let dequeued = this.front.value;
+    this.front = this.front.next;
+    if(!this.front) {this.back = null;}
+    return dequeued;
   }
   
   peek() {
-    return this.queue[0];
+    if(!this.front) {return null;}
+    return this.front.value;
   }
 };
 

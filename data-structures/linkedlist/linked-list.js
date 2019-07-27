@@ -1,7 +1,5 @@
 'use strict';
 
-// import { tsExternalModuleReference, exportAllDeclaration } from "@babel/types";
-
 class Node {
   constructor(value) {
     this.value = value;
@@ -16,23 +14,24 @@ class LinkedList{
     this.length = 0;
   }
 
-  append(value) {
-    if(!this.head && !this.tail) {
-      this.head = new Node(value);
-      this.tail = this.head;
-      return;
-    }
-    this.tail.next = new Node(value);
-    this.tail = this.tail.next;
-    this.length++;
-  }
-
   insert(value) {
     let current = new Node(value);
     current.next = this.head;
     this.head = current;
   }
-  
+
+  toString() {
+    let dataArray = [];
+    let current = this.head;
+    while(current.next) {
+      dataArray.push(current.value);
+      current = current.next;
+    }
+    dataArray.push(current.value);
+    return dataArray;
+  };
+  // refactor to do...while
+ 
   includes(value){
     if(!this.head) {return false;}
     let current = this.head;
@@ -47,24 +46,23 @@ class LinkedList{
   };
   // refactor to do...while
 
-  toString() {
-    let dataArray = [];
-    let current = this.head;
-    while(current.next) {
-      dataArray.push(current.value);
-      current = current.next;
+  append(value) {
+    if(!this.head && !this.tail) {
+      this.head = new Node(value);
+      this.tail = this.head;
+      return;
     }
-    dataArray.push(current.next);
-    return dataArray.toString();
-  };
-  // refactor to do...while
+    this.tail.next = new Node(value);
+    this.tail = this.tail.next;
+    this.length++;
+  }
 
   insertBefore(value, newVal) {
     if(!this.head) {return null;}
     let current = this.head;
     while(current.next) {
       if(current.next.value === value) {
-        let newNode = new Node(newValue);
+        let newNode = new Node(newVal);
         let nodeTemp = current.next;
         current.next = newNode;
         newNode.next = nodeTemp;
@@ -77,7 +75,7 @@ class LinkedList{
     if(!this.head) {return null;}
     let current = this.head;
     while(current.next) {
-      if(current.next.value === value) {
+      if(current.value === value) {
         let newNode = new Node(newValue);
         let nodeTemp = current.next;
         current.next = newNode;
