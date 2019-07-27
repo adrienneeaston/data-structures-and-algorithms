@@ -1,5 +1,5 @@
 # Singly Linked List
-<!-- Short summary or background information -->
+
 ## DSA Implementation: Linked Lists
 
 Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
@@ -12,7 +12,7 @@ Writes the following methods for the Linked List class:
 
 ### Approach & Efficiency
 
-Still learning this... <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Will be working with an O of n.
 
 ### API
 
@@ -32,7 +32,7 @@ Write the following methods for the Linked List class:
 
 ### Approach & Efficiency
 
-Still learning this... <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Will be working with an O of n.
 
 ### API
 
@@ -48,7 +48,7 @@ N/A
 
 ### Approach & Efficiency
 
-Still learning this... <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Will be working with an O of n.
 
 ### API
 
