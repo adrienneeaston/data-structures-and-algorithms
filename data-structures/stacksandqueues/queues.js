@@ -15,41 +15,27 @@ class Queue {
 
   enqueue(value) {
     let node = new Node(value);
-    node.next = this.back;
-    this.back = node;
+    if (!this.front) { 
+      this.front = node;
+      this.back = node;
+    } else {
+      node.next = this.back;
+      this.back = node;
+    }
     return this;
-
-    // this.queue.push(value);
-    // this.back = value;
-
-    // let node = new Node(value);
-    // node.next = this.top;
-    // this.top = node;
-    // return this;
   }
 
   dequeue() {
-    // if(!this.top) {return null;}
-    let popped = this.front.value;
+    if(!this.front) {return null;}
+    let dequeued = this.front.value;
     this.front = this.front.next;
-    return popped;
-
-    // return this.queue.shift();
-
-    // if(!this.top) {return null;}
-    // let popped = this.top.value;
-    // this.top = this.top.next;
-    // return popped;
+    if(!this.front) {this.back = null;}
+    return dequeued;
   }
   
   peek() {
+    if(!this.front) {return null;}
     return this.front.value;
-  
-
-    // return this.queue[0];
-
-    // if(!this.top) {return null;}
-    // return this.top.value;
   }
 };
 

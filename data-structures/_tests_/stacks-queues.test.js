@@ -94,9 +94,9 @@ describe('Queues', () => {
     queue.enqueue(3);
     queue.enqueue(4);
     queue.dequeue();
-    expect(queue.back.value).toEqual(4);
-    expect(queue.back.next.value).toEqual(3);
-    expect(queue.back.next.next.value).toEqual(2);
+    expect(queue.front.value).toEqual(2);
+    expect(queue.front.next.value).toEqual(3);
+    expect(queue.front.next.next.value).toEqual(2);
   });
 
   it('can successfully empty a queue after multiple dequeues', () => {
