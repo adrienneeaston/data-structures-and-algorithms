@@ -30,7 +30,6 @@ class LinkedList{
     dataArray.push(current.value);
     return dataArray;
   };
-  // refactor to do...while
  
   includes(value){
     if(!this.head) {return false;}
@@ -44,7 +43,6 @@ class LinkedList{
     if(current.value === value) {return true;}
     return false;
   };
-  // refactor to do...while
 
   append(value) {
     if(!this.head && !this.tail) {
@@ -60,6 +58,12 @@ class LinkedList{
   insertBefore(value, newVal) {
     if(!this.head) {return null;}
     let current = this.head;
+    if(this.head.value === value) {
+      let newNode = new Node(newVal);
+      this.head = newNode;
+      newNode.next = current;
+      return this;
+    }
     while(current.next) {
       if(current.next.value === value) {
         let newNode = new Node(newVal);
@@ -74,7 +78,7 @@ class LinkedList{
   insertAfter(value, newValue) {
     if(!this.head) {return null;}
     let current = this.head;
-    while(current.next) {
+    while(current) {
       if(current.value === value) {
         let newNode = new Node(newValue);
         let nodeTemp = current.next;
@@ -98,11 +102,5 @@ class LinkedList{
     return current.value;
   };
 };
-
-// let list = new LinkedList;
-// list.append(1);
-// list.append(2);
-// list.append(3);
-// console.log(list.head);
 
 module.exports = LinkedList;
