@@ -103,7 +103,7 @@ describe('insert before or after given value', () => {
     list.append(3);
     list.insertBefore(1, 5);
     expect(list.head.value).toEqual(5);
-    expect(list.head.value).toEqual(1);
+    expect(list.head.next.value).toEqual(1);
   });
 
 
