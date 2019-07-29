@@ -1,7 +1,5 @@
 'use strict';
 
-import { isTSExpressionWithTypeArguments } from "@babel/types";
-
 const mergeLists = (listA, listB) => {
 
   if(arguments.length !==2) {
