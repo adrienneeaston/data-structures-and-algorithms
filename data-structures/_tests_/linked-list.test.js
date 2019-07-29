@@ -65,35 +65,35 @@ describe('Linked List tests', () => {
 describe('insert before or after given value', () => {
   it('can successfully add a node to the end of the linked list', () => {
     let list = new LinkedList();
-    list.insert(1);
-    list.insert(2);
-    list.insert(3);
+    list.append(1);
+    list.append(2);
+    list.append(3);
     list.append(4);
-    expect(list.next.next.next.value).toEqual(4);
+    expect(list.head.next.next.next.value).toEqual(4);
   });
 
   it('can successfully add multiple nodes to the end of a linked list', () => {
     let list = new LinkedList();
-    list.insert(1);
-    list.insert(2);
-    list.insert(3);
+    list.append(1);
+    list.append(2);
+    list.append(3);
     list.append(4);
     list.append(5);
     list.append(6);
-    expect(list.next.next.next.value).toEqual(4);
-    expect(list.next.next.next.next.value).toEqual(5);
-    expect(list.next.next.next.next.next.value).toEqual(6);
+    expect(list.head.next.next.next.value).toEqual(4);
+    expect(list.head.next.next.next.next.value).toEqual(5);
+    expect(list.head.next.next.next.next.next.value).toEqual(6);
   });
 
   it('can successfully insert a node before a node located in the middle of a linked list', () => {
     let list = new LinkedList();
-    list.insert(1);
-    list.insert(2);
-    list.insert(3);
-    list.insert(4);
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    list.append(4);
     list.insertBefore(3, 5);
-    expect(list.next.next.value).toEqual(5);
-    expect(list.next.next.next.value).toEqual(3);
+    expect(list.head.next.next.value).toEqual(5);
+    expect(list.head.next.next.next.value).toEqual(3);
   });
 
   it('can successfully insert a node before the first node of a linked list', () => {
@@ -102,13 +102,13 @@ describe('insert before or after given value', () => {
 
   it('can successfully insert after a node in the middle of the linked list', () => {
     let list = new LinkedList();
-    list.insert(1);
-    list.insert(2);
-    list.insert(3);
-    list.insert(4);
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    list.append(4);
     list.insertAfter(3, 5);
-    expect(list.next.next.value).toEqual(3);
-    expect(list.next.next.next.value).toEqual(5);
+    expect(list.head.next.next.value).toEqual(3);
+    expect(list.head.next.next.next.value).toEqual(5);
   });
 
   it('can successfully insert a node after the last node of the linked list', () => {
