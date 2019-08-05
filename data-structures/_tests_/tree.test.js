@@ -18,8 +18,8 @@ describe('binary trees', () => {
     let tree = new BinaryTree(10);
     tree.add(7);
     tree.add(12);
-    expect(tree.node.left.value).toEqual(7);
-    expect(tree.node.right.value).toEqual(12);
+    expect(tree.root.left.value).toEqual(7);
+    expect(tree.root.right.value).toEqual(12);
   });
   
   it('Can successfully return a collection from a preorder traversal', () => {
@@ -30,7 +30,7 @@ describe('binary trees', () => {
     tree.add(12);
     tree.add(11);
     tree.add(15);
-    treeArray = tree.preOrder();
+    let treeArray = tree.preOrder();
     expect(treeArray).toEqual([10, 7, 4, 9, 12, 11, 15]);
   });
   
@@ -42,7 +42,7 @@ describe('binary trees', () => {
     tree.add(12);
     tree.add(11);
     tree.add(15);
-    treeArray = tree.inOrder();
+    let treeArray = tree.inOrder();
     expect(treeArray).toEqual([4, 7, 9, 10, 11, 12, 15]);
   });
   
@@ -54,7 +54,7 @@ describe('binary trees', () => {
     tree.add(12);
     tree.add(11);
     tree.add(15);
-    treeArray = tree.postOrder();
+    let treeArray = tree.postOrder();
     expect(treeArray).toEqual([4, 9, 7, 11, 15, 12, 10]);
   });
 });

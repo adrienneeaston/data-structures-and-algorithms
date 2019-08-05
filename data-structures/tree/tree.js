@@ -76,13 +76,22 @@ class BinaryTree {
 
 
 class BinarySearchTree extends BinaryTree {
-  constructor(root = null) {
-     this.root = root;
-  }
   
   // accepts a value, and adds a new node with that value in the correct location in the binary search tree.
-  add() {
-    
+  add(value) {
+
+    let _walk = (node) => {
+      if(value < node.value) {
+        if(node.left) {_walk(node.left);}
+        else {node.left = new Node(value);}
+      }  
+      if(value > node.value) {
+        if(node.right) {_walk(node.right);}
+        else {node.right = new Node(value);}
+      }      
+      return;
+    }
+    _walk(this.root)
   }
   
   // accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
@@ -91,7 +100,8 @@ class BinarySearchTree extends BinaryTree {
   }
 }
 
-module.exports = BinaryTree;
+// module.exports = BinaryTree;
+module.exports = BinarySearchTree;
 
 
   
