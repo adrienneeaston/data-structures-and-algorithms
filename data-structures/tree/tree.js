@@ -69,15 +69,12 @@ class BinaryTree {
     }
 
     return results;
-
   };
-
 };
 
 
 class BinarySearchTree extends BinaryTree {
   
-  // accepts a value, and adds a new node with that value in the correct location in the binary search tree.
   add(value) {
 
     let _walk = (node) => {
@@ -94,13 +91,15 @@ class BinarySearchTree extends BinaryTree {
     _walk(this.root)
   }
   
-  // accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
-  contains() {
-    
-  }
+  // // accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
+  // contains(tree, value) {
+  //   if(tree.inOrder().includes(value) = true) {
+  //     return true;
+  //   }
+  //   return false;
+  // }
 }
 
-// module.exports = BinaryTree;
 module.exports = BinarySearchTree;
 
 

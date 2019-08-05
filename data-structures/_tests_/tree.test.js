@@ -57,4 +57,15 @@ describe('binary trees', () => {
     let treeArray = tree.postOrder();
     expect(treeArray).toEqual([4, 9, 7, 11, 15, 12, 10]);
   });
+
+  // it('Can successfully return true or false for is a tree contains a given value', () => {
+  //   let tree = new BinaryTree(10);
+  //   tree.add(7);
+  //   tree.add(4);
+  //   tree.add(9);
+  //   tree.add(12);
+  //   tree.add(11);
+  //   tree.add(15);
+  //   expect(tree.contains(12)).toBeTruthy();
+  // });
 });
