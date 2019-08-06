@@ -10,7 +10,7 @@ describe('fizzbuzztree', () => {
     tree.add(12);
     tree.add(11);
     tree.add(15);
-    FizzBuzzTree(tree);
-    expect()
+    let newTree = fizzBuzzTree(tree);
+    expect(newTree.inOrder()).toEqual([4, 7, 'Fizz', 'Buzz', 11, 'Fizz', 'FizzBuzz']);
   });
 });
