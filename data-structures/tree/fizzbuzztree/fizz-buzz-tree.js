@@ -15,6 +15,8 @@ class BinaryTree {
 
   fizzBuzzTree(value) {
 
+    // still working on this
+
     let _walk = (node) => {
 
       if(node.left) {_walk(node.left);}
