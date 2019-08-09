@@ -31,4 +31,16 @@ For explicitly-typed languages: Ensure your node values are of type Object, to h
 This will be solved with an O(log n).
 
 ## API
-![whiteboard photo]('../../assets/fizzbuzztree.jpg');
+![whiteboard photo](../../assets/fizzbuzztree.jpg);
+
+# Breadth First
+
+## Challenge
+
+Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach;print every visited node’s value.
+
+## Approach & Efficiency
+This will be solved with an O of h.
+
+## API
+![whiteboard photo](../../assets/breadthfirst.jpg);
