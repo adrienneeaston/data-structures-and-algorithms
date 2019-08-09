@@ -1,5 +1,5 @@
-const FizzBuzzTree = require('./fizzbuzztree/fizz-buzz-tree.js');
-const Tree = require('./tree/tree.js');
+const FizzBuzzTree = require('../tree/fizzbuzztree/fizz-buzz-tree.js');
+const Tree = require('../tree/tree.js');
 
 describe('fizzbuzztree', () => {
   it('can successfully change values appropriately', () => {
