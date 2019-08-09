@@ -16,7 +16,7 @@ class BinaryTree {
   preOrder() {
     let results = [];
 
-    let _walk = (node) => {
+    let _walk= (node) => {
       results.push(node.value);
       if(node.left) { _walk(node.left); }
       if(node.right) { _walk(node.right); }

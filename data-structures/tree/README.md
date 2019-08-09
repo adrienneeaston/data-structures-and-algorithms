@@ -31,4 +31,4 @@ For explicitly-typed languages: Ensure your node values are of type Object, to h
 This will be solved with an O(log n).
 
 ## API
-N/A
+![whiteboard photo]('../../assets/fizzbuzztree.jpg');
