@@ -44,3 +44,15 @@ This will be solved with an O of h.
 
 ## API
 ![whiteboard photo](../../assets/breadthfirst.jpg);
+
+# Find Maximum Value
+
+## Challenge
+
+Write a function called find-maximum-value which takes binary tree as its only input. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+
+## Approach & Efficiency
+This will be solved with a time of O of n and space of O of 1.
+
+## API
+![whiteboard photo](../../assets/findmaximumvalue.jpg);

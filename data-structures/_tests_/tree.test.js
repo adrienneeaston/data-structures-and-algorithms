@@ -80,5 +80,16 @@ describe('binary trees', () => {
     let treeArray = tree.breadthFirst();
     expect(treeArray).toEqual([10, 7, 12, 4, 9, 11, 15]);
   });
+
+  it('can successfully return the highest value', () => {
+    let tree = new BinaryTree(10);
+    tree.add(7);
+    tree.add(4);
+    tree.add(9);
+    tree.add(12);
+    tree.add(11);
+    tree.add(15);
+    expect(tree.findMaximumValue()).toEqual(15);
+  });
 });
 

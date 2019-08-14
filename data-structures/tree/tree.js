@@ -70,6 +70,23 @@ class BinaryTree {
 
     return results;
   };
+
+  findMaximumValue() {
+    let output;
+    if(this.root) {
+      output = this.root.value;
+    }
+    function preOrderWalk(node) {
+      checkGreater(node.value);
+      if(node.left) {preOrderWalk(node.left);}
+      if(node.right) {preOrderWalk(node.right);}
+    };
+    function checkGreater(value) {
+      if(value > output) {output = value;}
+    }
+    preOrderWalk(this.root);
+    return output;
+  };
 };
 
 
