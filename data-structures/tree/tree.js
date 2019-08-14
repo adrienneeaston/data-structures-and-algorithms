@@ -87,22 +87,6 @@ class BinaryTree {
     preOrderWalk(this.root);
     return output;
   };
-
-  // findMaximumValue(){
-  //   let output;
-  //   if(this.root){output = this.root.val}
-  //   function preOrderWalk(node){
-  //     checkGreater(node.val);
-  //     if(node.left){preOrderWalk(node.left)};
-  //     if(node.right){preOrderWalk(node.right)};
-  //   };
-  //   function checkGreater(value){
-  //     console.log(value , output )
-  //     if(value > output){output = value};
-  //   };
-  //   preOrderWalk(this.root);
-  //   return output;
-  // }
 };
 
 
