@@ -1,6 +1,6 @@
 'use strict';
 
-const insertionSort = require('../mergesort/merge-sort.js');
+const mergeSort = require('../mergesort/merge-sort.js');
 
 describe('merge sort', () => {
   it('Can successfully sort an array', () => {
