@@ -1,27 +1,24 @@
 'use strict';
 
-function mergeSort(arr){
-  var len = arr.length;
-  if(len < 2)
-     return arr;
-  var mid = Math.floor(len/2),
-      left = arr.slice(0, mid),
-      right = arr.slice(mid, len);
+function mergeSort(arr) {
+  if(arr.length < 2) return arr;
+  let mid = Math.floor(arr.length/2);
+  let left = arr.slice(0, mid);
+  let right = arr.slice(mid, arr.length);
   return merge(mergeSort(left), mergeSort(right));
 }
 
 function merge(left, right){
-  var result = [],
-      lenL = left.length,
-      lenR = right.length,
-      l = 0,
-      r = 0;
-  while(l < lenL && r < lenR){
-     if(left[l] < right[r]){
-       result.push(left[l++]);
-     }
-     else{
-       result.push(right[r++]);
+  let result = [];
+  let l = 0;
+  let r = 0;
+  while(l < left.length && r < right.length) {
+    if(left[l] < right[r]) {
+      result.push(left[l]);
+      l++;
+    } else {
+      result.push(right[r]);
+      r++;
     }
   }  
   return result.concat(left.slice(l)).concat(right.slice(r));
