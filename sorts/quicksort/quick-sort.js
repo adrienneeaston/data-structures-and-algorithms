@@ -3,39 +3,30 @@
 function quickSort(arr, left, right) {
   var len = arr.length, 
   pivot,
-  partitionIndex;
+  position;
 
  if(left < right) {
    pivot = right;
-   partitionIndex = partition(arr, pivot, left, right);
+   position = partition(arr, pivot, left, right);
    
-  quickSort(arr, left, partitionIndex - 1);
-  quickSort(arr, partitionIndex + 1, right);
+  quickSort(arr, left, position - 1);
+  quickSort(arr, position + 1, right);
  }
  return arr;
 };
 
-// function quickSort(arr, left, right) {
-//   if(left < right) {
-//     let partitionIndex = partition(arr, left, right);
-//     quickSort(arr, left, partitionIndex - 1);
-//     quickSort(arr, partitionIndex + 1, right);
-//   }
-//   return arr;
-// };
-
 function partition(arr, pivot, left, right) {
   var pivotValue = arr[pivot],
-      partitionIndex = left;
+      position = left;
 
   for(var i = left; i < right; i++) {
    if(arr[i] < pivotValue) {
-     swap(arr, i, partitionIndex);
-     partitionIndex++;
+     swap(arr, i, position);
+     position++;
    }
  }
- swap(arr, right, partitionIndex);
- return partitionIndex;
+ swap(arr, right, position);
+ return position;
 };
        
 function swap(arr, i, j){
