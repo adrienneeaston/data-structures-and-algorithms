@@ -24,9 +24,9 @@ describe('hashtable', () => {
   });
 
   it('can successfully hash a key to an in-range value', () => {
-    let map = new HashMap(20);
+    let map = new HashTable(20);
     let key = "javascript";
-    let hashedKey = hash(key);
+    let hashedKey = map.hash(key);
     expect(hashedKey).toBeGreaterThanOrEqual(0);
     expect(hashedKey).toBeLessThanOrEqual(20);
   });

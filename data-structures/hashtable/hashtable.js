@@ -1,10 +1,12 @@
 'use strict';
 
 class node {
-
+  constructor(value) {
+    this.value = value;
+  }
 }
 
-class HashMap {
+class HashTable {
   constructor(size) {
     this.size = size;
     this.map = new Array(size);
@@ -29,4 +31,4 @@ class HashMap {
   }
 }
 
-module.exports = HashTable
+module.exports = HashTable;
