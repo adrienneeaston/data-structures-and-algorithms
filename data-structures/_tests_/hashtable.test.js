@@ -10,7 +10,7 @@ describe('hashtable', () => {
     map.add('Hank', 'Beast');
     map.add('Ororo', 'Storm');
     map.add('Bobby', 'Iceman');
-
+    // do stuff
   });
 
   it('can retrieve based on a key returns the value stored', () => {
@@ -42,7 +42,9 @@ describe('hashtable', () => {
     map.add('Hank', 'Beast');
     map.add('Ororo', 'Storm');
     map.add('Bobby', 'Iceman');
-
+    let position = map.hash('Marie');
+    expect(position).toBeEqual(map.hash('Bobby'));
+    expect(map.map[position].length).toBeGreaterThan(1);
   });
 
   it('can successfully retrieve a value from a bucket within the hashtable that has a collision', () => {
@@ -52,8 +54,10 @@ describe('hashtable', () => {
     map.add('Hank', 'Beast');
     map.add('Ororo', 'Storm');
     map.add('Bobby', 'Iceman');
-    let action = map.get('Bobby');
-    expect(action).toBe('Bobby');
+    let actionM = map.get('Marie');
+    let actionB = map.get('Bobby');
+    expect(actionM).toBe('Rogue');    
+    expect(actionB).toBe('Bobby');
   });
 
   it('can successfully hash a key to an in-range value', () => {
