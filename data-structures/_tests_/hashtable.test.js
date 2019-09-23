@@ -8,8 +8,8 @@ describe('hashtable', () => {
     map.add('Logan', 'Wolverine');
     map.add('Marie', 'Rogue');
     map.add('Hank', 'Beast');
-    map.add('Kurt', 'Nightcrawler');
     map.add('Ororo', 'Storm');
+    map.add('Bobby', 'Iceman');
 
   });
 
@@ -18,10 +18,10 @@ describe('hashtable', () => {
     map.add('Logan', 'Wolverine');
     map.add('Marie', 'Rogue');
     map.add('Hank', 'Beast');
-    map.add('Kurt', 'Nightcrawler');
     map.add('Ororo', 'Storm');
-    let search = get('Marie');
-    expect(search).toBe('Rogue');
+    map.add('Bobby', 'Iceman');
+    let action = map.get('Marie');
+    expect(action).toBe('Rogue');
   });
 
   it('can successfully return null for a key that does not exist in the hashtable', () => {
@@ -29,10 +29,10 @@ describe('hashtable', () => {
     map.add('Logan', 'Wolverine');
     map.add('Marie', 'Rogue');
     map.add('Hank', 'Beast');
-    map.add('Kurt', 'Nightcrawler');
     map.add('Ororo', 'Storm');
-    let search = get('Max');
-    expect(search).toBeNull();
+    map.add('Bobby', 'Iceman');
+    let action = map.contains('Max');
+    expect(action).toBeNull();
   });
 
   it('can successfully handle a collision within the hashtable', () => {
@@ -40,8 +40,8 @@ describe('hashtable', () => {
     map.add('Logan', 'Wolverine');
     map.add('Marie', 'Rogue');
     map.add('Hank', 'Beast');
-    map.add('Kurt', 'Nightcrawler');
     map.add('Ororo', 'Storm');
+    map.add('Bobby', 'Iceman');
 
   });
 
@@ -50,9 +50,10 @@ describe('hashtable', () => {
     map.add('Logan', 'Wolverine');
     map.add('Marie', 'Rogue');
     map.add('Hank', 'Beast');
-    map.add('Kurt', 'Nightcrawler');
     map.add('Ororo', 'Storm');
-
+    map.add('Bobby', 'Iceman');
+    let action = map.get('Bobby');
+    expect(action).toBe('Bobby');
   });
 
   it('can successfully hash a key to an in-range value', () => {

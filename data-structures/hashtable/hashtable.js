@@ -21,7 +21,11 @@ class HashTable {
   }
 
   contains(key) {
-
+    let hashKey = this.hash(key);
+    for(let i = 0; i < this.map[hashKey].length; i++) {
+      if(this.map[hashKey][i][key]) {return true;}
+    }
+    return null;
   }
 
   hash(key) {
