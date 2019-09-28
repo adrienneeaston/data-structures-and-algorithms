@@ -1,6 +1,6 @@
 'use strict';
 
-const TreeIntersection = require('../hashtable/treeintersection.js');
+const TreeIntersection = require('../hashtable/tree-intersection.js');
 
 describe('treeintersection', () => {
   it('can successfully...', () => {

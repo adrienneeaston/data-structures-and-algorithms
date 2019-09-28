@@ -9,7 +9,7 @@ contains: takes in the key and returns a boolean, indicating if the key exists i
 hash: takes in an arbitrary key and returns an index in the collection.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+O of 1 or O of n depending on if there is a colision.
 
 ## API
 .add()
