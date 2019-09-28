@@ -14,14 +14,20 @@ class HashTable {
 
   add(key, value) {
     let hashValue = this.hash(key);
-
     if(!this.map[hashValue]) {this.map[hashValue] = [];}
-    this.map[hashValue].push(value);
+    let resultObj = {};
+    resultObj[key] = value;
+    this.map[hashValue].push(resultObj);
     //refactor for linked list
   }
 
   get(key) {
     let hashKey = this.hash(key);
+    for(let i = 0; i < this.map[hashKey].length; i++) {
+      if(this.map[hashKey][i][key]) {return this.map[hashKey][i][key];}
+    }
+    return null;
+    // console.log( this.map[this.hash(key)][0][key])
     // return this.map[hashKey];
   }
 
