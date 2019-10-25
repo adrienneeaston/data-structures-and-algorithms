@@ -15,32 +15,36 @@ class LinkedList{
   }
 
   insert(value) {
+    if(!this.head && !this.tail) {
+      this.head = new Node(value);
+      this.tail = this.head;
+      this.length++;
+      return;
+    }
     let current = new Node(value);
     current.next = this.head;
     this.head = current;
+    this.length++;
   }
 
   toString() {
     let dataArray = [];
     let current = this.head;
-    while(current.next) {
+    while(current) {
       dataArray.push(current.value);
       current = current.next;
     }
-    dataArray.push(current.value);
     return dataArray;
   };
  
   includes(value){
-    if(!this.head) {return false;}
     let current = this.head;
-    while(current.next) {
+    while(current) {
       if(current.value === value) {
         return true;
       }
       current = current.next;
-    }
-    if(current.value === value) {return true;}
+    }  
     return false;
   };
 
@@ -48,6 +52,7 @@ class LinkedList{
     if(!this.head && !this.tail) {
       this.head = new Node(value);
       this.tail = this.head;
+      this.length++;
       return;
     }
     this.tail.next = new Node(value);
@@ -94,7 +99,7 @@ class LinkedList{
     {return 'exception';}
     if(k === 0) {return this.tail.value;}
     let current = this.head;
-    let i = this.length - k;
+    let i = this.length - k - 1;
     while(i > 0) {
       current = current.next;
       i -= 1;
