@@ -63,32 +63,60 @@ class LinkedList{
   insertBefore(value, newVal) {
     if(!this.head) {return null;}
     let current = this.head;
-    if(this.head.value === value) {
+    if(current.value === value) {
       let newNode = new Node(newVal);
       this.head = newNode;
       newNode.next = current;
       return this;
     }
     while(current.next) {
+      // if(current.next.value === value) {
+      //   let newNode = new Node(newVal);
+      //   let nodeTemp = current.next;
+      //   current.next = newNode;
+      //   newNode.next = nodeTemp;
+      //   return this;
+      // } else {current = current.next;}
+
+      // if(current.next.value === value) {
+      //   let nodeTemp = current.next;
+      //   current.next = new Node(newVal);
+      //   current.next.next = nodeTemp;
+      //   return this;
+      // } else {current = current.next;}
+
       if(current.next.value === value) {
         let newNode = new Node(newVal);
-        let nodeTemp = current.next;
+        newNode.next = current.next;
         current.next = newNode;
-        newNode.next = nodeTemp;
         return this;
       } else {current = current.next;}
     }
   };
 
-  insertAfter(value, newValue) {
+  insertAfter(value, newVal) {
     if(!this.head) {return null;}
     let current = this.head;
     while(current) {
+      // if(current.value === value) {
+      //   let newNode = new Node(newVal);
+      //   let nodeTemp = current.next;
+      //   current.next = newNode;
+      //   newNode.next = nodeTemp;
+      //   return this;
+      // } else {current = current.next;}
+
+      // if(current.value === value) {
+      //   let nodeTemp = current.next;
+      //   current.next = new Node(newVal);
+      //   current.next.next = nodeTemp;
+      //   return this;
+      // } else {current = current.next;}
+
       if(current.value === value) {
-        let newNode = new Node(newValue);
-        let nodeTemp = current.next;
+        let newNode = new Node(newVal);
+        newNode.next = current.next;
         current.next = newNode;
-        newNode.next = nodeTemp;
         return this;
       } else {current = current.next;}
     }
