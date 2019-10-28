@@ -16,7 +16,7 @@ class BinaryTree {
   preOrder() {
     let results = [];
 
-    let _walk= (node) => {
+    let _walk = (node) => {
       results.push(node.value);
       if(node.left) { _walk(node.left); }
       if(node.right) { _walk(node.right); }
@@ -94,6 +94,8 @@ class BinarySearchTree extends BinaryTree {
   
   add(value) {
 
+    if(this.root === null) {this.root = new Node(value);}
+
     let _walk = (node) => {
       if(value < node.value) {
         if(node.left) {_walk(node.left);}
@@ -115,7 +117,35 @@ class BinarySearchTree extends BinaryTree {
   //   }
   //   return false;
   // }
+
 }
+
+
+// Not working, not part of these assignments, just exploring some ideas
+balancedTree(sortedArray) {
+
+  let tree = new BinaryTree();
+
+  let _walk = (node) => {
+
+    index = Math.floor(sortedArray.length/2);
+    value = sortedArray[index];
+
+    if(node === null) {node = new Node(value);}
+
+    if(value < node.value) {
+      if(node.left) {_walk(node.left);}
+      else {node.left = new Node(value);}
+    }  
+    if(value > node.value) {
+      if(node.right) {_walk(node.right);}
+      else {node.right = new Node(value);}
+    }      
+    return;
+  }
+  _walk(this.root) 
+  return tree;
+};
 
 module.exports = BinarySearchTree;
 

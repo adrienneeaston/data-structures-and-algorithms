@@ -1,10 +1,8 @@
 'use strict';
 
-const mergeLists = (listA, listB) => {
+let LinkedList = require('../linkedlist/linked-list.js')
 
-  if(arguments.length !==2) {
-    return 'Enter two lists please!';
-  }
+const mergeLists = (listA, listB) => {
 
   if(!listA.head) {return listB.head;}
   if(!listB.head) {return listA.head;}
@@ -13,33 +11,27 @@ const mergeLists = (listA, listB) => {
   let currentB = listB.head;
 
   while(currentA.next && currentB.next) {
-    // breaks links
     let nodeTempA = currentA.next;
     let nodeTempB = currentB.next;
-    //connects
-    // currentA.next = currentB;
-    // currentA = currentA.next;
-    // currentA.next = nodeTempA; 
-    // currentA = currentA.next;
-    // currentB = nodeTempB;
     currentA.next = currentB;
     currentB.next = nodeTempA;
     currentA = nodeTempA;
     currentB = nodeTempB; 
   };
+  
+  if(!currentB.next) {
+    let nodeTempA = currentA.next;
+    currentA.next = currentB;
+    currentB.next = nodeTempA;
+  }
 
-  currentA.next = currentB;
-  if(currentA.next) {
+  if(!currentA.next) {
     currentA.next = currentB;
   }
 
-  // If(!currentA.next && !currentB.next) {
-  //   currentA.next = currentB;
-  //   currentA = currentB;
-  //   currentA.next = null;
-  // };
-
   return listA.head;
 };
+
+module.exports = mergeLists;
 
 // add edge cases for lists different sizes, lists empty, one list is empty
